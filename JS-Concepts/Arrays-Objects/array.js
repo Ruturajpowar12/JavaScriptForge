@@ -45,3 +45,6 @@ console.log(slice);
 
 let splice = marsks.splice(1, 3, 5);
 console.log(splice);
+
+
+
