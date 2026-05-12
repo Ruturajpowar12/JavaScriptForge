@@ -15,7 +15,7 @@ console.log(ids);
 
 
 //style
-
+///ss
 div.style.backgroundColor = "pink";             //node.style
 
 div.innerText = "Ruturaj";
