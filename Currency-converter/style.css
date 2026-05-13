@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, #fca3e0, #f8fa92);
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 200px;
+    width: 380px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: rgba(15, 15, 03, 1);
+}
+
+.card h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 5px 0;
+}
+
+.card #input-am {
+    width: 100%;
+    height: 40px;
+    margin: 25px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+    color: rgb(141, 140, 140);
+    background-color: #ededed;
+
+
+}
+
+.converter-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+
+}
+
+.converter-box select {
+    width: 100px;
+    height: 30px;
+    padding: 7px;
+    margin: 6px 0;
+    border-radius: 10px;
+    outline: none;
+    background-color: #ededed;
+}
+
+
+
+.msg {
+
+
+    margin: 30px 0 0 10px;
+
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    margin: 25px 0;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border-style: none;
+    background-color: #530766;
+    color: white;
+    margin-top: 40px;
+}

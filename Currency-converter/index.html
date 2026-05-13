@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency-converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>Currency Converter</h2>
+        <input type="text" placeholder="Enter Amount " id="input-am">
+
+        <div class="converter-box">
+            <div class="first">
+                <p>From</p>
+                <select class="dropdown">
+                    <option value="USD">USD</option>
+                    <option value="INR">INR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                    <option value="CNY">CNY</option>
+                    <option value="EUR">EUR</option>
+                    <option value="CAD">CAD</option>
+                    <option value="AUD">AUD</option>
+                    <option value="BRL">BRL</option>
+                    <option value="ZAR">ZAR</option>
+                </select>
+            </div>
+
+            <p>&#8633;</p>
+            <div class="secound">
+                <p>To</p>
+                <select class="dropdown">
+                    <option value="USD">USD</option>
+                    <option value="INR">INR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                    <option value="CNY">CNY</option>
+                    <option value="EUR">EUR</option>
+                    <option value="CAD">CAD</option>
+                    <option value="AUD">AUD</option>
+                    <option value="BRL">BRL</option>
+                    <option value="ZAR">ZAR</option>
+                </select>
+            </div>
+
+
+
+        </div>
+        <div id="result" class="msg">Enter amount, select currencies, and click Convert Currency.</div>
+        <button id="convert-btn">Convert Currency</button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
