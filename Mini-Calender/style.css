@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+body {
+    background: linear-gradient(135deg, #460586, #5f03d7);
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Fugaz One", sans-serif;
+}
+
+.box {
+    background-color: #fff;
+    width: 350px;
+    height: 410px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.box .month {
+    background-color: #f20707;
+    text-align: center;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 75px;
+    font-weight: 200;
+    font-size: 17px;
+}
+
+.main {
+    text-align: center;
+
+    color: rgb(80, 79, 79);
+
+}
+
+#date {
+    font-size: 80px;
+    font-weight: 900;
+    color: black
+}
