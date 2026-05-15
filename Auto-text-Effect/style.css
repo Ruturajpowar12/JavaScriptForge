@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+
+body {
+    background: linear-gradient(1350deg, #2f1eed, #7ba7ed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    font-style: normal;
+    color: azure;
+
+}
