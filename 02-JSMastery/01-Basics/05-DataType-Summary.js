@@ -40,3 +40,34 @@ const MyFun = function (){  //2
 const arrowFunction = ()=>{ //2
 
 }
+
+
+
+// *******************************************************************
+
+// Memory  Allocation.
+
+// Memory types - stack (Primitive) , Heap (Non-Primitive)
+
+// stack -
+     let myName = "Ruturaj"
+     let anotherName = myName
+     anotherName = "swarup"
+     console.log(myName);
+     console.log(anotherName);
+
+
+//heap -
+
+    let userOne = {
+        email:"user@gamil.com",
+        upi:"user@bl"
+    }
+
+    let userTwo = userOne
+
+    userTwo.email ="ram@gaml.com"
+    console.log(userOne.email);
+    console.log(userTwo.email);
+    
+     
