@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <input type="text" id="input">
+
+    <form id="form">
+    <input type="text">
+    <button>Submit</button>
+</form> -->
+
+<input type="text" id="inp1">
+<button id="btn2">
+    click
+</button>
+
+<ul id="list">
+    
+</ul>
+
+    
+</body>
+<script>
+//    const input = document.querySelector("#input");
+
+//     input.addEventListener("keydown", (event) => {
+//     console.log(event.key);
+// });
+
+// const form = document.querySelector("#form");
+
+// form.addEventListener("submit", (event) => {
+//     event.preventDefault();
+
+//     console.log("Form Submitted");
+// });
+
+let input =document.querySelector("#inp1")
+let btn =document.querySelector("#btn2")
+let list = document.querySelector("#list")
+
+btn.addEventListener("click",(event)=>{
+    const li = document.createElement("li");
+
+    li.innerText = input.value;
+
+    list.appendChild(li);
+
+    input.value = "";
+})
+
+</script>
+</html>
