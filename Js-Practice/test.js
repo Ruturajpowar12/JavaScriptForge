@@ -472,3 +472,55 @@ async function getUsers() {
 }
 
 getUsers();
+
+
+
+//ES6+ Advanced JavaScript
+
+const student2 = {
+    name:"Ruturaj",
+    age:21
+}
+
+const {name , age }= student2
+console.log(name);
+console.log(age);
+
+
+const arr1 = [1,2,3]
+const arr2 = [7,8,3]
+const merged = [...arr1, ...arr2];
+console.log(merged);
+
+
+const sum = (...num) => {
+
+    let total = 0;
+
+    num.forEach((val) => {
+        total += val;
+    });
+
+    return total;
+}
+console.log(sum(1,23,45,6));
+
+
+const student = {
+   name: "Ruturaj",
+   marks: 90
+}
+const {name , marks }= student
+
+const newObject ={
+    ...student,
+    city: "Kolhapur"
+}
+ console.log(newObject);
+ 
+
+
+
+
+
+
