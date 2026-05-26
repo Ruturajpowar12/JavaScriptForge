@@ -443,3 +443,32 @@ console.log(totPrice);
 
 //Fetch API & Real API Calls
 
+const fetchData = async()=>{    
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts/1") 
+
+    const data = await response.json()
+
+    console.log(data["title"]);
+    } catch (error) {
+        console.log("Error :",error);
+        
+    }
+}
+
+fetchData()
+
+
+async function getUsers() {
+
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts/4"); 
+    const data = await response.json();
+
+    
+    data.forEach((val) => {
+        
+        console.log(`ID: ${val.id}, Title: ${val.title}`);
+    });
+}
+
+getUsers();
