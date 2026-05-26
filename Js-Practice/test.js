@@ -368,5 +368,78 @@ console.log(totPrice);
 
 
 
+//Asynchronous JavaScript
 
+
+// console.log("A");
+
+// setTimeout(() => {
+//     console.log("B");
+// }, 1000);
+
+// console.log("C");
+// //A
+// //C
+// //B
+
+// const myPromise = new Promise((resolve,reject)=>{
+
+//     let success= true;
+
+//     if(success){
+//         resolve("data is successful")
+//     }else{
+//         reject("data is rejected")
+//     }
+
+// })
+
+// myPromise
+//     .then((result) => {
+//         console.log(result);
+//     })
+//     .catch((error) => {
+//         console.log(error);
+//     });
+
+
+//   function getData() {
+
+//     return new Promise((resolve) => {
+
+//         setTimeout(() => {
+//             resolve("Hello hello");
+//         }, 2000);
+
+//     });
+// }
+// async function fetchData() {
+
+//     const result = await getData();
+
+//     console.log(result);
+// }
+
+// fetchData();
+
+
+// function getProducts(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             resolve("Products Loaded")
+//         },2000)
+//     })
+// }
+
+// const giveData = async ()=>{
+//     const res = await getProducts()
+//     console.log(res)
+// }
+
+// giveData()
+
+
+
+
+//Fetch API & Real API Calls
 

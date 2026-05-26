@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="heading">Hello</h1>
+    <br>
+    <input type="text" placeholder="enter value">
+
+    <button>Click here!</button>
+<br><br>
+    <button id="btn" >Click!</button>
+    <p>
+        Hello World
+    </p>
+
+   
+</body>
+ <script>
+        let h1 = document.getElementById("heading")
+        let btn = document.querySelector("button")
+        let btn2 = document.querySelector("#btn")
+        let input = document.querySelector("input")
+        let para = document.querySelector("p")
+        h1.innerText="Welcome"
+        h1.style.color="blue"
+
+      btn.addEventListener("click",printHello=()=>{
+            console.log("Clicked")
+            console.log(input.value);
+            
+        })
+        btn2.addEventListener("click",changePara = ()=>{
+             para.innerText="Hello Javascript"
+            para.style.color="red"
+        })
+
+    </script>
+</html>
