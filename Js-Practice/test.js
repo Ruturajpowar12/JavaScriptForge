@@ -587,5 +587,51 @@ test();         //undefined
 
 
 
+//Closures (VERY IMPORTANT)
+
+// A closure happens when:
+// inner function remembers outer variables
+// even after outer function finishes execution.
+
+function outer(){
+    let count=0
+
+   function inner(){
+        count++
+        console.log(count);
+    }
+    return inner
+}
+
+const counter = outer()
+counter()
+counter()
+
+
+function multiply(x){
+    return function(y){
+        return x * y;   
+    }   
+}
+
+const double = multiply(2)
+console.log(double(5));
+
+
+function createPassword(n){
+    
+    
+    return function(m){
+        if(n === m){
+            console.log("Correct Password");
+        }else{
+            console.log("Incorrect Password");
+            
+        }
+    }
+}
+
+const check = createPassword("1234");
+check("1234")
 
 
