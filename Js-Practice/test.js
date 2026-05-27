@@ -635,3 +635,43 @@ const check = createPassword("1234");
 check("1234")
 
 
+
+
+//The this Keyword (VERY IMPORTANT)
+
+const car ={
+    brand:"Maruti",
+    carName(){
+        console.log(this.brand);
+    }
+}
+car.carName()
+
+
+function sayBye(){
+    console.log(this);
+}
+sayBye() //<ref *1> Object [global] { ....
+
+
+const heyBye = () =>{
+    console.log(this);
+}
+heyBye()    //{}
+
+
+const bank = {
+    balance: 1000,
+    deposit(amount){
+        this.balance += amount;
+        console.log(this.balance);
+    },
+    withdraw(amount){
+        this.balance -= amount;
+        console.log(this.balance);
+    }
+}
+
+bank.deposit(500);
+bank.withdraw(200);
+
