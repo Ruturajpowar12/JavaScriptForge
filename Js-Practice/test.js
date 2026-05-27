@@ -519,6 +519,71 @@ const newObject ={
  console.log(newObject);
  
 
+//Advanced Array Methods
+
+const users = [
+    {id:1, name:"Ram"},
+    {id:2, name:"Ruturaj"},
+    {id:3, name:"Ganesh"}
+];
+
+let res = users.find((user)=>{
+    return user.id === 3
+})
+console.log(res); 
+
+
+let num = [10,345,34,653,101];
+let res2 = num.some((val)=>{
+    return val >100;
+})
+console.log(res2);
+
+
+let res3 = num.every((val)=>{
+   return val >0;
+})
+console.log(res3);
+
+
+let numbers = [10,20,30,40,50]
+
+let res4 = numbers
+    .filter((val)=>{
+        return val >20
+    })
+    .map((val)=>{
+        return val*2
+    })
+console.log(res4);
+
+
+
+//Scope & Hoisting
+
+let  a = "ruturaj"; //global variable
+const myFunction = ()=>{
+    let age =21     //function variable
+    console.log(age);
+    console.log(a);
+}
+myFunction()
+
+// Test hoisting with : var
+console.log(b);
+var b = 10       //undefined
+
+//Test hoisting with : let
+console.log(c);
+let c = 10       //Cannot access 'c' before initialization
+
+
+var x = 10;
+function test() {
+    console.log(x);
+    var x = 20;
+}
+test();         //undefined
 
 
 
