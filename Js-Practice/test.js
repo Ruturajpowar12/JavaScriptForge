@@ -748,3 +748,31 @@ String.prototype.reverseText = function(){
     return this.split("").reverse().join("");
 }
 console.log("hello".reverseText());
+
+
+
+//Event Loop & Call Stack (VERY IMPORTANT)
+
+console.log("A");
+
+setTimeout(() => {
+    console.log("B");
+},0);
+
+console.log("C");
+//A
+//B
+//C
+
+console.log("1");
+setTimeout(() => {
+    console.log("2");
+},0);
+Promise.resolve().then(() => {
+    console.log("3");
+});
+console.log("4");
+//1
+//2
+//4
+//3
