@@ -675,3 +675,59 @@ const bank = {
 bank.deposit(500);
 bank.withdraw(200);
 
+
+//OOP (Object-Oriented Programming)
+
+class Student {
+
+     constructor(name,marks){
+        this.name = name;
+        this.marks = marks
+     }
+
+     printdata(){
+        console.log("name :",this.name);
+        console.log("Marks :",this.marks);
+     }
+}
+
+const newdata = new Student("Ruturaj",98);
+newdata.printdata()
+
+
+class car{
+    constructor(brand,model){
+        this.brand = brand;
+        this.model = model
+     }
+
+     printdata(){
+        console.log("name :",this.brand);
+        console.log("Marks :",this.model);
+     }
+}
+
+const newdata2 = new car("maruti","6D57");
+newdata2.printdata()
+
+const newdata3 = new car("alto","6D47");
+newdata3.printdata()
+
+
+class BankAccount {
+    constructor(balance){
+        this.balance = balance;
+    }
+    deposit(amount){
+        this.balance += amount;
+        console.log("Balance:", this.balance);
+    }
+    withdraw(amount){
+        this.balance -= amount;
+        console.log("Balance:", this.balance);
+    }
+}
+
+const check = new BankAccount(2000);
+check.deposit(200);
+check.withdraw(500);
