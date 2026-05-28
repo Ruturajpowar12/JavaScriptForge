@@ -731,3 +731,20 @@ class BankAccount {
 const check = new BankAccount(2000);
 check.deposit(200);
 check.withdraw(500);
+
+
+
+//Prototypes & Prototype Chain
+  let arr = [2,4,6,8]
+  console.log(arr.__proto__);
+  
+Array.prototype.sayBye = function(){
+    console.log("Say Bye");
+}
+  let arr2 = [2,8]
+arr2.sayBye()
+
+String.prototype.reverseText = function(){
+    return this.split("").reverse().join("");
+}
+console.log("hello".reverseText());
