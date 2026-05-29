@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 60px;
+            width: 140px;
+            margin: 10px;
+            background-color: deeppink;
+            color: #fff;
+            border: none;
+            outline: none;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        h1{
+            margin: 15px;
+        }
+        #ipu{
+            height: 30px;
+            margin: 20px  0 10px 10px;
+            padding: 10px;
+             border-radius: 30px;
+            font-size: 14px;
+            font-weight: 300;
+            background-color: rgb(254, 251, 108);
+             border: none;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" id="ipu" placeholder="enter name ">
+    <button id="add">Add</button>
+    <ul id="ul">
+
+    </ul>
+
+    <br>
+    <br>
+    <br>
+   
+    <h1 id="name">Ruturaj</h1>
+     <button id="click">click</button>
+
+
+</body>
+<script>
+//querySelector
+//innerText
+//innerHTML
+//style
+//events
+let btn = document.querySelector("#click")
+let btn2 = document.getElementById("add")
+let ul = document.querySelector("ul")
+let input = document.querySelector("input")
+
+let name =document.querySelector("#name")
+
+const colors = ["#FF5733", "#33FF57", "#3357FF", "#F3FF33", "#9333FF"];
+ let index =0
+
+
+
+
+ btn2.addEventListener("click",() => {
+if (input.value.trim() !== "") {
+        // 2. Create the list item element
+        const li = document.createElement("li");
+        
+       
+        li.innerText = input.value;
+     
+        ul.appendChild(li);
+        
+       
+        input.value = "";
+    }
+    
+
+ })
+
+btn.addEventListener("click",()=>{
+ console.log("clicked");
+ 
+    if(name.innerText == "Ruturaj"){
+        name.innerText = "Swarup"
+    }else{
+         name.innerText ="Ruturaj"
+    } 
+    
+document.body.style.backgroundColor = colors[index];
+index++;
+
+if(index === colors.length){
+    index = 0
+}
+ 
+})
+
+
+</script>
+</html>
