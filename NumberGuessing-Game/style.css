@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+ body{
+    background: linear-gradient(95deg,#f67947,#e7dc42);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .box{
+    background-color: white;
+    height: 400px;
+    width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 16px 1px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ #p1{
+    text-align: center;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ }
+  #p2{
+    text-align: center;
+    margin: 20px 0 30px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  input{
+    height: 60px;
+    text-align: center;
+    width: 70px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    outline: none;
+    cursor: pointer;
+  } input :focus{
+    border: 1px solid #f67947;
+  }
+ 
+  button{
+    background-color: #f67947;
+     height: 50px;
+    text-align: center;
+    border: none;
+    border-radius: 5px; 
+    color: white;
+    font-weight: 700;
+    outline: none;
+margin-bottom: 40px;
+    width: 100px;
+  }
+  button:hover
+  {
+    background-color: #e16230;
+  }
+
+  #p4{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;
+  }
+#p5{
+    
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
