@@ -8,7 +8,7 @@ Users can search for any GitHub username and instantly view profile details such
 
 ## 📸 Project Screenshot
 
-![GitHub Profile Viewer](images/project-screenshot.png)
+![GitHub Profile Viewer](./assets/image.png)
 
 ---
 
