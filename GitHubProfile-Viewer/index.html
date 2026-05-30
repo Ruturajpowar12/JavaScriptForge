@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h1>GitHub Profile Viewer</h1>
+        <button id="theme">Theme</button>
+    </nav>
+
+    <div class="box">
+
+        <div class="container1">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter GitHub Username"
+                >
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+
+        <div class="container2">
+
+            <img
+                id="avatar"
+                src="https://avatars.githubusercontent.com/u/1?v=4"
+                alt="Profile Image"
+            >
+
+            <h2 id="name">GitHub User</h2>
+
+            <p id="bio">
+                User bio will appear here.
+            </p>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <h3 id="followers">0</h3>
+                    <p>Followers</p>
+                </div>
+
+                <div class="stat">
+                    <h3 id="following">0</h3>
+                    <p>Following</p>
+                </div>
+
+                <div class="stat">
+                    <h3 id="repos">0</h3>
+                    <p>Repositories</p>
+                </div>
+
+            </div>
+
+            <a
+                href="#"
+                id="profile-link"
+                target="_blank"
+            >
+                View GitHub Profile
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
