@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+   
+}
+
+body{
+    height: 110vh;
+    background: linear-gradient(175deg,#1f048a,#cb5367);
+}
+ 
+nav{
+    text-align: center;
+    height: 100px;
+    padding: 40px;
+}
+nav h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    color: #fff;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+
+.box1{
+     background-color: #fff; 
+     margin: 60px 0 0 0;
+     width: 400px;
+     height: 90px;
+     border-radius: 8px; 
+     padding: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center; 
+     gap: 30px;
+     box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.3);
+}
+
+.box1 input{
+    height: 40px;
+    width: 260px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 7px; 
+    font-weight: 600;
+    cursor: pointer;
+    
+
+}
+
+.box1 input:focus{
+    border: 2px solid #1f048a;
+}
+.box1 button{
+     height: 40px;
+     background-color: #1f048a;
+     outline: none;
+     border: none;
+     width: 70px;
+     border-radius: 7px;
+     font-weight: 600;
+     transition: transform 0.3s ease-in-out;
+     cursor: pointer;
+     color: #fff;
+}
+
+.box1 button:hover{
+    transform: scale(0.95);
+}
+
+.box2{
+    background-color: #fff; 
+    
+     width: 600px;
+   
+     border-radius: 8px; 
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center; 
+     color: black;
+    box-shadow: 10px 17px 14px 5px rgba(0,0,0,0.3);
+}
+.box2 img{
+   height: 180px;
+    width: 400px;
+     border-radius: 5px;
+     object-fit: cover;
+     margin: 0 0 10px 0;
+     
+
+}
+
+.box2 h2{
+     margin: 0 0 10px 0; 
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+     font-size: 26px;
+     font-weight: 800;
+}
+.box2 h3{
+     margin: 0 0 10px 0;
+   font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13spx;
+}
+
+.box2 p{ margin: 10px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   text-align:justify;
+}
