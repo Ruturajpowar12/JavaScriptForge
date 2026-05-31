@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:linear-gradient(60deg,#d6469a,#82d9d9);
+    height: 100vh; 
+    display: flex;
+    padding-top: 100px;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column; 
+    gap: 30px;
+    
+}
+.box{
+ background-color: #fff;   
+
+ width: 500px;
+ display: flex;
+justify-content: center;
+    align-items: center;
+    flex-direction: column;
+border-radius: 10px; padding: 10px; box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.3);
+}
+.box h1{
+    margin: 20px 0 25px 0;
+ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ font-weight: 300;
+ font-size: 35px; color: #d6469a;
+}
+
+form{
+    display: flex; 
+    flex-direction:column ; gap: 5px; 
+}
+
+form input{
+    width: 400px;
+     height: 30px; 
+     padding: 10px;
+     border: 1px solid grey; 
+     border-radius: 7px;
+     outline: none; 
+     margin: 0 0 13px 0;
+     cursor: pointer;
+}
+form input:focus{
+    border:2px solid #d6469a; 
+}
+form label{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+ 
+form button{
+    width: 400px;
+     height: 35px; 
+     margin: 10px 0 15px 0;
+     border: none;
+     border-radius: 7px;
+     outline: none; 
+     background-color: #d6469a; 
+     color: white;
+     font-size: 16px; 
+     font-weight: 600;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ; 
+      box-shadow: 7px 10px 13px 0px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+}
+
+form button:hover{
+    transform: scale(.97);
+}
+
+
+.box1{
+    background-color: #fff;   
+
+ width: 500px;
+ display: flex;
+justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    
+border-radius: 10px; padding: 10px; box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.3);
+}
+
+.box1 ul li{
+    list-style: none; 
+    display: flex;
+    gap: 150px; 
+    font-weight: 400; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+ 
+
+.box1 ul li button{
+    width: 70px;
+    height: 25px;
+     border: none;
+     border-radius: 7px;
+     outline: none; 
+     background-color: #ef5f5f; 
+     color: #fff;
+
+}
+
+.box1 ul li button:hover{
+    background-color: #e84343;
+}
