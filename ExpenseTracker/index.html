@@ -7,24 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button id="themeBtn">🌙 Theme</button>
 
     <div class="box">
         <h1>Expense Tracker</h1>
+
+        <div class="total-box">
+            Total Expense: ₹<span id="total">0</span>
+        </div>
+
         <form>
-            <label for="name">Expense Name </label>
+            <label>Expense Name</label>
             <input type="text" id="Expense-Name">
-            <label for="amount">Amount </label>
-            <input type="text" id="Amount">
-            <button id="Add">Add</button>
+
+            <label>Amount</label>
+            <input type="number" id="Amount">
+
+            <button id="Add">Add Expense</button>
         </form>
     </div>
 
     <div class="box1">
-        <ul>
-            <li>sahbbj <span>200</span><button>delete</button></li>
-        </ul>
+        <ul></ul>
+
+        <button id="clearAll">Clear All</button>
     </div>
-    
 
     <script src="app.js"></script>
 </body>
