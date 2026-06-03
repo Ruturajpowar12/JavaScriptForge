@@ -10,22 +10,122 @@
 
 </head>
 <body>
+
+
     <header>
-        <nav>
-           <img src="https://uhabit.stewardtechnologies.com/images/logo.png" alt="logo">
-            <h2>Habit Tracker</h2>
+
+
+        <div class="logo-section">
+            <img src="https://d33wubrfki0l68.cloudfront.net/9836afbed2a841ad50b569f3d6fc7ae065ceb175/e34cd/assets/appicon.png" alt="Logo">
+            
+        </div>
+        <div class="mid">
+            <h1>Habit Tracker</h1>
             <p>02 June 2026</p>
+        </div>
+
+
+        <div class="header-right">
             
             <button><i class="fa-solid fa-circle-half-stroke"></i> Mode</button>
-           
-        </nav>
+        </div>
+
     </header>
 
+   
+    <main>
+
+        
+        <section class="add-habit">
+            <input type="text" placeholder="Enter habit name">
+            <button>Add Habit</button>
+        </section>
+
+       
+        <section class="filter-section">
+            <button>All</button>
+            <button>Completed</button>
+            <button>Pending</button>
+        </section>
+
+        
+        <section class="habit-list">
+
+            <div class="habit-card">
+                <div class="habit-info">
+                    <h3>Read 30 Minutes</h3>
+                    <p>Added: 02 June 2026</p>
+                </div>
+
+                <div class="habit-actions">
+                    <button>Complete</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+
+            <div class="habit-card">
+                <div class="habit-info">
+                    <h3>Morning Exercise</h3>
+                    <p>Added: 02 June 2026</p>
+                </div>
+
+                <div class="habit-actions">
+                    <button>Complete</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+
+        </section>
+
+ 
+        <section class="statistics">
+
+            <div class="stat-card">
+                <h2>4</h2>
+                <p>Total Habits</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>2</h2>
+                <p>Completed</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>2</h2>
+                <p>Pending</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>50%</h2>
+                <p>Completion</p>
+            </div>
+
+        </section>
+
+        
+        <section class="streak-section">
+
+            <div class="streak-card">
+                <h2>5 Days</h2>
+                <p>Current Streak</p>
+            </div>
+
+            <div class="streak-card">
+                <h2>12 Days</h2>
+                <p>Best Streak</p>
+            </div>
+
+        </section>
+
+    </main>
+
+   
+    <footer>
+        <p>Habit Tracker © 2026</p>
+        <p>Made with HTML, CSS & JavaScript</p>
+    </footer>
 
     
-
-
     <script src="app.js"></script>
-    
 </body>
 </html>
