@@ -64,3 +64,25 @@ setTimeout(()=>{
 },2000)
 
 
+
+//objects
+
+const car = {
+    name3:"thar",
+    model:1990
+}
+
+console.log(car)
+
+car.age =28
+console.log(car["name3"])
+console.log(car)
+
+delete car.model
+console.log(car);
+
+
+for(let val in car){
+    console.log(`${val} is ${car[val]}`);
+    
+}
