@@ -30,3 +30,37 @@ console.log(fd); //fd is not defined
  }
 exam1()
 
+
+//callback function
+
+function display(res){
+    console.log(res)    
+}
+
+function add(num1,num2, callback){
+    let sum = num1+num2
+    callback(sum)
+}
+add(10,20, display)
+
+//anonymous function
+
+ let sum = function(a ,b){
+    return a + b
+ }
+ console.log(sum(12,12));
+
+//example-2
+(
+    function(){
+        console.log("Welcome to GreateStack");
+    }
+)();
+ 
+//3
+setTimeout(()=>{
+    console.log("hello ");
+    
+},2000)
+
+
