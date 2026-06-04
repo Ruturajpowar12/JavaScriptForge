@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.box{
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+
+nav{
+    background: linear-gradient(90deg,#5d6ae2,#4c58df);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;align-items: center;
+    gap: 15px;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.logo h1{
+    font-size: 2rem;
+}
+
+.theme button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: white;
+    color: #3b4de2;
+    font-weight: bold;
+}
+
+
+.main{
+    padding: 40px;
+}
+
+
+.input-box{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.input-box input{
+    flex: 1;
+    padding: 18px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    font-size: 1rem;
+}
+
+.input-box button{
+    padding: 18px 35px;
+    border: none;
+    border-radius: 15px;
+    background: #4f5fff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.input-box button:hover{
+    background: #3948e8;
+}
+
+
+.tracker{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.tracker div{
+    display: flex;
+    gap: 10px;
+}
+
+.tracker button{
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+}
+
+.tracker button:first-child{
+    background: #4f5fff;
+    color: white;
+}
+
+.tracker p{
+    color: #666;
+    font-weight: 600;
+}
+
+.tasklist ul{
+    list-style: none;
+}
+
+.tasklist li{
+    display: flex;
+  justify-content: space-between;
+    align-items: center;
+      padding: 20px;
+
+    margin-bottom: 15px;
+  border: 1px solid #e4e4e4;
+    border-radius: 15px;
+    font-size: 1.1rem;
+}
+
+.tasklist li div{
+    margin-right: 10px;
+}
+
+.tasklist li i.fa-circle-check{
+    color: #27ae60;
+    font-size: 1.5rem;
+}
+
+.tasklist li button{
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+.tasklist li button i{
+    color: crimson;
+    font-size: 1.3rem;
+}
+
+
+.footer{
+    text-align: center;
+    padding: 25px;
+    color: #666;
+    font-size: 1rem;
+}
+
+.footer i{
+    color: red;
+}
+
+.task-left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+}
+
+.fa-circle-check{
+    color:green;
+}
+
+.delete-btn{
+    border:none;
+    background:none;
+    cursor:pointer;
+}
