@@ -34,7 +34,7 @@ body{
    
     height:50%;
       display: flex;
-  
+    gap:20px;
     justify-content: space-around;
 
 }
@@ -46,6 +46,19 @@ body{
     border-radius: 20px;
     background-color: rgb(9, 250, 29);
     color: black;
+    font-size: medium;
+    font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+#reset{
+    height: 50px;
+    width: 140px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(4, 186, 20);
+    color: #fff;
     font-size: medium;
     font-weight: 600;
   cursor: pointer;
