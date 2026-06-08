@@ -44,7 +44,7 @@ console.log("every user is active :",res3);
 
 // 5.Check if at least one user is inactive.
 let res4 = users.some((val)=>{
-  return val.active === true
+  return val.active === false
 })
 console.log("least one user is inactive :",res4);
 
