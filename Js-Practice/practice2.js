@@ -90,3 +90,72 @@ const student = {
  console.log(react);
  console.log(node);
  
+// Challenge 3: Spread Operator
+
+const frontend = ["HTML", "CSS", "JS"];
+const backend = ["Node", "Express"];
+
+const fullStack = [...frontend,...backend]
+console.log(fullStack);
+
+console.log(...frontend,...backend);
+
+// Challenge 4: Rest Operator
+
+function sum(...num){
+return num.reduce((total ,curr)=>{
+  return total + curr
+})
+}
+ console.log( 
+sum(10,20,30,40));
+
+
+//  Challenge 5: Optional Chaining 
+const user = {
+  profile: {
+    social: {
+      github: "ruturaj-dev"
+    }
+  }
+};
+
+const {github}= user.profile.social
+const git = user.profile.social.github
+ const githib =user?.profile?.social?.github
+console.log(git);
+console.log(githib);
+console.log(github);
+
+ const linkedin  =user?.profile?.social?.linkedin
+ console.log(linkedin);
+ 
+
+
+//  Challenge 6 (Real Interview Style)
+const products = [
+  { name: "Laptop", price: 50000 },
+  { name: "Mouse", price: 500 },
+  { name: "Keyboard", price: 1500 },
+  { name: "Monitor", price: 12000 }
+];
+
+const totalPrice = products.reduce((tot, curr) => {
+  return tot + curr.price;
+}, 0);
+
+console.log(totalPrice);
+
+
+// Challenge 7 (Hard)
+const nums = [1,2,3,4,5,6,7,8,9,10];
+
+const res = nums
+    .filter((val)=>{
+      return val % 2 ===0
+    })
+    .map((val)=>{
+      return val * val
+    })
+
+console.log(res);
