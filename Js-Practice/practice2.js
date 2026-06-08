@@ -65,3 +65,28 @@ let total = users.reduce((prev , curr)=>{
 
 },0)
 console.log("total age of all users :",total);
+
+
+
+// Challenge 2: Destructuring
+const student = {
+  name: "Ruturaj",
+  course: "BCA",
+  marks: {
+    js: 90,
+    react: 85,
+    node: 88
+  }
+};
+ const {name} = student
+ const {course} = student
+ const {js} = student.marks
+ const {react} = student.marks
+ const {node} = student.marks
+
+ console.log(name);
+ console.log(course);
+ console.log(js);
+ console.log(react);
+ console.log(node);
+ 
