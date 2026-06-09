@@ -323,3 +323,50 @@ for (let i = 1; i <= 5; i++) {
   }
   console.log(row);
 }
+
+//Control Flow (Part 6)
+
+// Practical Task 1
+let num = 1;
+while (num <= 10) {
+  console.log(num);
+  num++;
+}
+
+// Practical Task 2
+let num1 = 10;
+while (num1 >= 1) {
+  console.log(num1);
+  num1--;
+}
+
+//Practical Task 3
+let num2 = 1;
+while (num2 <= 20) {
+  if (num2 % 2 === 0) console.log(num2);
+  num2++;
+}
+
+//Practical Task 4
+let num = 1;
+do {
+  console.log(num);
+  num++;
+} while (num <= 10);
+
+//Mini Project
+let n = Number(prompt(" Enter a number:"));
+let i = 1;
+while (i <= 10) {
+  console.log(`${n} x ${i} = ${n * i}`);
+  i++;
+}
+
+//Challenge
+let N = Number(prompt("Enter an NUmber :"));
+let fact = 1;
+while (N != 0) {
+  fact *= N;
+  N--;
+}
+console.log(fact);
