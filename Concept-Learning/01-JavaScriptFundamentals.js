@@ -174,5 +174,74 @@ console.log(`You live in ${city}.`);
 
 
 
+// Module 1 Revision Test
+// Part A: Output Questions
+// Q1
+let a = 10;
+let b = 20;
+console.log(a + b); //30
+
+// Q2
+let name = "Ruturaj";
+console.log(typeof name); //string
+
+// Q3
+let age = Number("22");
+console.log(typeof age); //number
+
+// Q4
+console.log("5" + "5"); //55
+
+// Q5
+console.log(10 % 3);//1
+
+// Q6
+console.log(2 ** 4);//16
+
+// Q7
+let city = "Pune";
+console.log(`City: ${city}`); //City: Pune
+
+// Q8
+let x;
+console.log(typeof x); //undefined
+
+// Part B: Coding Tasks
+// Task 1: Student Information
+let name = "swarup"
+let age = 22
+let course = "Javscript"
+let city = "mumbai"
+
+console.log(`Student Name: ${name}`);
+console.log(`Age: ${age}`);
+console.log(`Course: ${course}`);
+console.log(`City: ${city}`);
+
+// Task 2: Simple Calculator
+
+let num1 = Number(prompt("Enter first Number :"))
+let num2 = Number(prompt("Enter Second Number :"))
+
+console.log(`Addition : ${num1 + num2}`);
+console.log(`Subtraction : ${num1 - num2}`);
+console.log(`Multiplication : ${num1 * num2}`);
+console.log(`Division : ${num1 / num2}`);
+
+// Task 3: Rectangle Area
+
+let length = Number(prompt("Enter a Length:"))
+let width = Number(prompt("Enter a Width:"))
+
+let area  = length * width
+
+console.log(`Area of Rectangle = ${area}`);
 
 
+
+//Task 4 ⭐
+
+let name = prompt("Enter your name:")
+let favoriteLanguage = prompt("Enter your favorite language:");
+console.log(`Hello ${Name}!`);
+console.log(`Your favorite programming language is ${favoriteLanguage}`);
