@@ -370,3 +370,54 @@ while (N != 0) {
   N--;
 }
 console.log(fact);
+
+//🚀 Module 2: Final Part
+// Practical Task 1
+
+for (let i = 1; i <= 20; i++) {
+  if (i === 10) {
+    break;
+  }
+  console.log(i);
+}
+
+// Practical Task 2
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) {
+    continue;
+  }
+  console.log(i);
+}
+
+// Practical Task 3
+for (let i = 1; i <= 30; i++) {
+  if (i % 3 === 0) {
+    continue;
+  }
+  console.log(i);
+}
+
+//Mini Project ⭐
+const secret = 17;
+for (let i = 1; i <= 100; i++) {
+  if (i === secret) {
+    console.log(`Secret Found: ${i}`);
+    break;
+  }
+}
+
+// Mini Project ⭐⭐
+
+const correctPin = 1234;
+let attempts = 0;
+
+while (attempts < 3) {
+  let pin = Number(prompt("Enter Your ATM Pin :"));
+  attempts++;
+  if (pin === correctPin) {
+    console.log("Access Granted");
+    break;
+  } else if (attempts === 3) {
+    console.log("Card Blocked");
+  }
+}
