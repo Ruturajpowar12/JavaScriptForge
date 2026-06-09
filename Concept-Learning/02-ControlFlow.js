@@ -278,3 +278,48 @@ for (let i = 1; i <= number; i++) {
   sum += i;
 }
 console.log(sum);
+
+// Module 2: Control Flow (Part 5)
+
+// Practical Task 1
+let stars = "";
+for (let i = 1; i <= 5; i++) {
+  stars += "*";
+}
+console.log(stars);
+
+//Practical Task 2
+let star2 = "";
+for (let i = 1; i <= 5; i++) {
+  star2 += "*";
+  console.log(star2);
+}
+
+// Practical Task 3
+
+let star3 = "";
+for (let i = 1; i <= 5; i++) {
+  star3 += i;
+  console.log(star3);
+}
+
+//Mini Project
+
+let n = Number(prompt("Enter a Number:"));
+
+for (let i = 1; i <= n; i++) {
+  let row = "";
+  for (let j = 1; j <= i; j++) {
+    row += j;
+  }
+  console.log(row);
+}
+
+//Challenge
+for (let i = 1; i <= 5; i++) {
+  let row = "";
+  for (let j = 5; j >= i; j--) {
+    row += "*";
+  }
+  console.log(row);
+}
