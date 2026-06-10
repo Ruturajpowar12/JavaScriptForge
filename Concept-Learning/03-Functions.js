@@ -92,3 +92,43 @@ function calculateGrade(marks) {
   }
 }
 console.log(calculateGrade(82));
+
+// Module 3: Functions (Part 3)
+// Function Expressions & Arrow Functions
+
+// Practical Task 1
+// function multiply(a, b) {
+//   return a * b;
+// }
+const multiply = (a, b) => {
+  return a * b;
+};
+
+// Practical Task 2
+const subtract = (a, b) => {
+  return a - b;
+};
+console.log(subtract(7, 2));
+
+// Practical Task 3
+const isEven = (num) => num % 2 === 0;
+console.log(isEven(4));
+
+// Practical Task 4
+const getGreeting = (name) => {
+  return `Hello ${name}`;
+};
+console.log(getGreeting("Ruturaj"));
+
+//Mini Project ⭐
+const calculateDiscount = (price, discountPercent) => {
+  discountAmount = (price * discountPercent) / 100;
+  return (finalPrice = price - discountAmount);
+};
+console.log(calculateDiscount(1000, 20));
+
+// Mini Project ⭐⭐
+const checkVotingEligibility = (age) => {
+  return age >= 18 ? `Eligible to Vote` : `Not Eligible to Vote`;
+};
+console.log(checkVotingEligibility(10));
