@@ -186,3 +186,78 @@ function createUser(name) {
 createUser("Ruturaj");
 
 // role cannot be accessed outside the function  - role is block variable/scope it can not access outside of the function.
+
+// Module 3: Functions (Part 5)
+// Closures 🔥
+
+// Practical Task 1
+function outer() {
+  const city = "Pune";
+  function inner() {
+    console.log(city);
+  }
+  inner();
+}
+outer();
+
+//Practical Task 2
+function parent() {
+  const course = "JavaScript";
+  return function () {
+    console.log(course);
+  };
+}
+const showCourse = parent();
+showCourse();
+
+// Practical Task 3
+function crateCounter() {
+  let count = 0;
+
+  return function () {
+    count++;
+    console.log(count);
+  };
+}
+const counter = crateCounter();
+counter();
+counter();
+counter();
+counter();
+counter();
+
+// Mini Project ⭐
+function createGreeting(name) {
+  return function () {
+    console.log(`Hello ${name}`);
+  };
+}
+
+const greet = createGreeting("Ram");
+greet();
+const greet2 = createGreeting("Ruturaj");
+greet2();
+
+// Mini Project ⭐⭐
+function bankAccount() {
+  let balance = 1000;
+  return function () {
+    balance += 500;
+    console.log(balance);
+  };
+}
+const deposit = bankAccount();
+deposit();
+deposit();
+deposit();
+
+function bankAccount2(balance) {
+  return function (amoumt) {
+    balance += amoumt;
+    console.log(balance);
+  };
+}
+const deposit = bankAccount2(2000);
+deposit(100);
+deposit(200);
+deposit(300);
