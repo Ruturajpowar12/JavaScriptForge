@@ -132,3 +132,57 @@ const checkVotingEligibility = (age) => {
   return age >= 18 ? `Eligible to Vote` : `Not Eligible to Vote`;
 };
 console.log(checkVotingEligibility(10));
+
+// Module 3: Functions (Part 4)
+// Scope
+
+// Practical Task 1
+const country = "India";
+function showCountry() {
+  console.log(country);
+}
+showCountry();
+
+// Practical Task 2
+function showMessage() {
+  const message = "Learning JavaScript";
+  console.log(message);
+}
+showMessage();
+
+//Practical Task 3
+const college = "VCK";
+function bothPrints() {
+  const course = "BCA";
+  console.log(college);
+  console.log(course);
+}
+bothPrints();
+
+// Practical Task 4
+
+function checkScope() {
+  if (true) {
+    const secret = "Hidden";
+  }
+}
+console.log(secret); //secret is not defined
+
+//  Mini Project ⭐
+const appName = "Student Portal";
+function showAppInfo() {
+  const version = "1.0";
+  console.log(`App: ${appName}`);
+  console.log(`Version: ${version}`);
+}
+showAppInfo();
+
+//Mini Project ⭐⭐
+function createUser(name) {
+  const role = "Student";
+  console.log(`Name: ${name}`);
+  console.log(`Role: ${role}`);
+}
+createUser("Ruturaj");
+
+// role cannot be accessed outside the function  - role is block variable/scope it can not access outside of the function.
