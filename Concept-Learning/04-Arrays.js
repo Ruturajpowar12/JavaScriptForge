@@ -112,3 +112,44 @@ const products = ["Laptop", "Mouse", "KeyBoard", "Monitor"];
 products.splice(1, 1, "Headphones");
 console.log(products.includes("Monitor"));
 console.log(products);
+
+// Module 4: Arrays (Part 4)
+// Array Iteration
+
+//Practical Task 1
+const colors = ["Red", "Green", "Blue"];
+for (let i = 0; i < colors.length; i++) {
+  console.log(colors[i]);
+}
+
+//practical Task 2
+const techs = ["HTML", "CSS", "JavaScript", "React"];
+for (let val of techs) {
+  console.log(val);
+}
+
+//Practical Task 3
+const num = [10, 20, 30, 40, 50];
+num.forEach((val) => {
+  console.log(val);
+});
+
+// Practical Task 4
+const names = ["Ram", "shyam", "Ruturaj", "Amit"];
+names.forEach((val) => {
+  console.log(`Student: ${val}`);
+});
+
+//Mini Project ⭐
+const marks = [80, 75, 90, 85, 70];
+for (let val of marks) {
+  console.log(val);
+}
+console.log(`Total Students :${marks.length}`);
+
+// Mini Project ⭐⭐
+const cart = ["Milk", "Bread", "Eggs", "Butter"];
+cart.forEach((val) => {
+  console.log(`Items:${val}`);
+});
+console.log(`Total Items: ${cart.length}`);
