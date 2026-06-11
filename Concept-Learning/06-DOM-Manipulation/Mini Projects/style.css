@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(136deg, #c0f7f4, #c9b8f9);
+}
+
+nav {
+  height: 70px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(116deg, #f71aad, #4306ed);
+  box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 90px;
+}
+
+.box img {
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box img:hover {
+  transform: scale(0.95);
+}
+
+footer {
+  height: 70px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-116deg, #f129ae, #4306ed);
+  box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.counter-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.counter-main .box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #fff;
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+.counter-main .box h1 {
+  font-size: 100px;
+  margin-bottom: 10px;
+}
+.btn-counter {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.btn-counter button {
+  height: 45px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #2b0497;
+  color: #fff;
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease-in-out;
+}
+
+.btn-counter button:active {
+  transform: scaleX(0.8);
+}
+
+.color-container {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.1s ease;
+}
+.color-container .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 400px;
+  width: 400px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  gap: 70px;
+}
+
+.color-container .box input {
+  width: 100%;
+}
+
+.color-container .box div {
+  font-size: 20px;
+  background-color: #050da4;
+  color: #fff;
+  padding: 13px;
+  font-weight: 900;
+  border-radius: 7px;
+}
