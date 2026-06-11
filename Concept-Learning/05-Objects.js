@@ -16,13 +16,13 @@ console.log(student["age"]);
 console.log(student["city"]);
 
 // Practical Task 2
-const mobile = {
+const samsungMobile = {
   brand: "Samsung",
   price: 25000,
   color: "Black",
 };
-console.log(mobile["brand"]);
-console.log(mobile["price"]);
+console.log(samsungMobile["brand"]);
+console.log(samsungMobile["price"]);
 
 //Practical Task 3
 const language = {
@@ -60,3 +60,75 @@ const mobile = {
 mobile.price = 20000;
 mobile.colors = ["Red", "Black"];
 console.log(mobile);
+
+//Module 5: Objects (Part 2)
+// Object Methods
+
+//Practical Task 1
+const person = {
+  name: "Ram",
+  sayHello() {
+    console.log(`Hello ${this.name}`);
+  },
+};
+person.sayHello();
+
+// Practical Task 2
+const language = {
+  title: "JavaScript",
+  author: "Ruturaj",
+  setBook() {
+    console.log(`${this.title} by ${this.author}`);
+  },
+};
+language.setBook();
+
+// Practical Task 3
+const samsungMobile = {
+  brand: "Samsung",
+  price: 25000,
+  showDetails() {
+    console.log(`${this.brand} - ₹${this.price}`);
+  },
+};
+samsungMobile.showDetails();
+
+// Practical Task 4
+const obj = {
+  name: "Ruturaj",
+  age: 22,
+  introduce() {
+    console.log(`My Name is ${this.name} and I am ${this.age} years old`);
+  },
+};
+obj.introduce();
+
+//Mini Project ⭐
+const student = {
+  name: "Ruturaj",
+  course: "BCA",
+  college: "VCK",
+  showStudent() {
+    console.log(`${this.name} studies ${this.course} at ${this.college}`);
+  },
+};
+student.showStudent();
+
+//Mini Project ⭐⭐
+const bankAccount = {
+  accountHolder: "Ruturaj Powar",
+  balance: 2000,
+  deposit(amount) {
+    this.balance += amount;
+    console.log("Deposited: ", amount);
+    console.log(`Balance : ${this.balance}\n`);
+  },
+  withdraw(amount) {
+    this.balance -= amount;
+    console.log("withdrawn: ", amount);
+    console.log(`Balance : ${this.balance}\n`);
+  },
+};
+
+bankAccount.deposit(500);
+bankAccount.withdraw(300);
