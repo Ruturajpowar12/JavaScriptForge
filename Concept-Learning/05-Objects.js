@@ -184,3 +184,70 @@ const movie = {
 for (let key in movie) {
   console.log(`${key} : ${movie[key]}`);
 }
+
+// Module 5: Objects (Part 4)
+// Destructuring, Spread Operator, Rest Operator
+
+// Practical Task 1
+const obj = {
+  name: "Ram",
+  age: 20,
+  city: "Pune",
+};
+const { name, age } = obj;
+console.log(name);
+console.log(age);
+
+// Practical Task 2
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const res = [...arr1, ...arr2];
+console.log(res);
+
+//Practical Task 3
+const task1 = {
+  name: "Ruturaj",
+};
+const task2 = {
+  city: "Kolhapur",
+};
+const result = {
+  ...task1,
+  ...task2,
+};
+console.log(result);
+
+//Practical Task 4
+const [first, ...others] = [10, 20, 30, 40, 50];
+console.log(first);
+console.log(others);
+
+//Mini Project ⭐
+const student = {
+  name: "Ruturaj",
+  course: "JavaScript",
+  college: "VCK",
+  city: "Kolhapur",
+};
+const { name: studentName, course, college: studentCollege, city } = student;
+console.log(studentName);
+console.log(course);
+console.log(studentCollege);
+console.log(city);
+
+//Mini Project ⭐⭐
+const employee = {
+  name: "Ram",
+  salary: 30000,
+  department: "BCA",
+  city: "Kolhapur",
+};
+const { name, salary } = employee;
+console.log(name);
+console.log(salary);
+
+const newOriginal = {
+  ...employee,
+  experience: 2,
+};
+console.log(newOriginal);
