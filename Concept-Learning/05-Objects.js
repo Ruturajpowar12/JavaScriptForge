@@ -132,3 +132,55 @@ const bankAccount = {
 
 bankAccount.deposit(500);
 bankAccount.withdraw(300);
+
+// Module 5: Objects (Part 3)
+// Object Iteration
+
+// Practical Task 1
+const data = {
+  name: "Ram",
+  age: 20,
+  city: "Pune",
+};
+for (let key in data) {
+  console.log(key);
+}
+
+// Practical Task 2
+for (let key in data) {
+  console.log(key, data[key]);
+}
+
+// Practical Task 3
+const obj = {
+  brand: "Samsung",
+  price: 25000,
+  color: "Black",
+};
+console.log(Object.keys(obj));
+
+// Practical Task 4
+console.log(Object.values(obj));
+
+//Mini Project ⭐
+const student = {
+  name: "Ruturaj",
+  course: "JavaScript",
+  college: "VCK",
+  city: "Kolhapur",
+};
+console.log(Object.keys(student));
+console.log(Object.values(student));
+console.log(Object.entries(student));
+
+// Mini Project ⭐⭐
+const movie = {
+  title: "hanuman",
+  year: 2023,
+  rating: 8.5,
+  hero: "Tejja Sajja",
+};
+
+for (let key in movie) {
+  console.log(`${key} : ${movie[key]}`);
+}
