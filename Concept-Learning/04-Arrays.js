@@ -153,3 +153,35 @@ cart.forEach((val) => {
   console.log(`Items:${val}`);
 });
 console.log(`Total Items: ${cart.length}`);
+
+//Module 4: Arrays (Part 5)
+//map(),filter(),find()
+
+// Practical Task 1
+const num = [1, 2, 3, 4, 5];
+const res = num.map((val) => val * 2);
+console.log(res);
+
+//Practical Task 2
+const num1 = [10, 15, 20, 25, 30, 35];
+const res = num1.filter((num) => num % 2 === 0);
+console.log(res);
+
+//Practical Task 3
+const num2 = [5, 10, 15, 20, 25];
+const res = num2.find((val) => val > 18);
+console.log(res);
+
+//Practical Task 4
+const fruits = ["Apple", "Mango", "Banana", "Orange"];
+console.log(fruits.find((val) => val === "Banana"));
+
+// Mini Project ⭐
+const nums = [45, 78, 92, 60, 35, 88];
+const res = nums.filter((val) => val >= 60);
+console.log(res);
+
+//Mini Project ⭐⭐
+const product = ["Laptop", "Mouse", "KeyBoard", "Monitor", "HeadPhones"];
+const res = product.map((val) => val.toUpperCase());
+console.log(res);
