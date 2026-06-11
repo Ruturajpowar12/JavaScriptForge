@@ -76,3 +76,39 @@ cart.pop();
 cart.shift();
 console.log(cart);
 console.log(cart.length);
+
+// Module 4: Arrays (Part 3)
+// includes() indexOf( )slice() splice()
+
+// Practical Task 1
+const fruits = ["Apple", "Mango", "Banana"];
+console.log(fruits.includes("Mango")); //true
+
+// Practical Task 2
+const techs = ["HTML", "CSS", "JavaScript", "React"];
+console.log(techs.indexOf("JavaScript"));
+
+//Practical Task 3
+const num = [10, 20, 30, 40, 50];
+console.log(num.slice(1, 4));
+
+// Practical Task 4
+const colors = ["Red", "Green", "Blue", "Yellow"];
+colors.splice(2, 1);
+console.log(colors);
+// colors.splice(2, 1, "Pink");
+// console.log(colors);
+
+// Mini Project ⭐
+const names = ["Ram", "shyam", "Ruturaj", "Amit"];
+console.log(names.includes("Ruturaj"));
+console.log(names.indexOf("Amit"));
+
+const newArray = names.slice(1, 3);
+console.log(newArray);
+
+// Mini Project ⭐⭐
+const products = ["Laptop", "Mouse", "KeyBoard", "Monitor"];
+products.splice(1, 1, "Headphones");
+console.log(products.includes("Monitor"));
+console.log(products);
