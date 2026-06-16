@@ -297,3 +297,50 @@ like();
 like();
 like();
 like();
+
+//🚀 Module 7: Advanced JavaScript (Part 6)
+// Higher Order Functions (HOF)
+//📝 Practical Task 1
+const nums = [1, 2, 3];
+const result = nums.map((num) => num + 1);
+console.log(result);
+//[2,3,4]
+
+//📝 Practical Task 2
+const numbers = [10, 20, 30, 40];
+const res = numbers.map((val) => val * 3);
+console.log(res);
+
+//📝 Practical Task 3
+const ages = [10, 18, 22, 15, 30];
+const res = ages.filter((age) => age >= 18);
+console.log(res);
+
+//📝 Practical Task 4
+const marks = [50, 60, 70, 80];
+const res = marks.reduce((total, curr) => {
+  return total + curr;
+});
+console.log(res);
+
+//⭐ Mini Project 1: Product Price Calculator
+const prices = [100, 200, 300, 400];
+const result = prices.map((val) => {
+  const gst = val * (18 / 100);
+  return val + gst;
+});
+
+console.log(result);
+
+//⭐ Mini Project 2: Student Result Analyzer
+const marks = [25, 40, 55, 80, 30, 95];
+
+const useFilter = marks.filter((mark) => mark >= 35);
+const useReduce = marks.reduce((tot, curr) => tot + curr);
+const res = marks
+  .filter((mark) => mark >= 35)
+  .reduce((tot, curr) => tot + curr);
+
+console.log(useFilter);
+console.log(useReduce);
+console.log(res);
