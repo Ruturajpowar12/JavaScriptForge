@@ -402,3 +402,59 @@ const bank = {
   },
 };
 bank.showAccount();
+
+//🚀 Module 7: Advanced JavaScript (Part 8)
+// Event Loop
+// 📝 Practical Task 1
+console.log("A");
+setTimeout(() => {
+  console.log("B");
+}, 0);
+console.log("C");
+//A
+//C
+//B
+
+//📝 Practical Task 2
+console.log("JavaScript");
+setTimeout(() => {
+  console.log("Async Task");
+}, 0);
+console.log("Finished");
+
+//📝 Practical Task 3
+console.log(1);
+setTimeout(() => {
+  console.log(2);
+}, 1000);
+console.log(3);
+//1
+//3
+//2
+
+//📝 Practical Task 4
+console.log("Start");
+setTimeout(() => {
+  console.log("Task 1");
+}, 2000);
+setTimeout(() => {
+  console.log("Task 2");
+}, 1000);
+console.log("End");
+//Start
+//End
+//Task 2
+//Task 1
+
+//⭐ Mini Project 1: Food Delivery Simulation
+console.log("Order Received");
+console.log("Preparing Food...");
+setTimeout(() => {
+  console.log("Food Delivered");
+}, 3000);
+
+//⭐ Mini Project 2: User Login Simulation
+console.log("Checking Credentials...");
+setTimeout(() => {
+  console.log("Login Successful");
+}, 2000);
