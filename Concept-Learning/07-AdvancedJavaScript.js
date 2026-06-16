@@ -458,3 +458,47 @@ console.log("Checking Credentials...");
 setTimeout(() => {
   console.log("Login Successful");
 }, 2000);
+
+//🚀 Module 7: Advanced JavaScript (Part 9)
+// ES6+ Features
+// 📝 Practical Task 1
+const name = "Ruturaj";
+console.log(`Hello ${name}`); //Hello Ruturaj
+
+// 📝 Practical Task 2
+const fruits = ["Apple", "Banana", "Mango"];
+const [first, second] = fruits;
+console.log(first);
+console.log(second);
+
+// 📝 Practical Task 3
+const student = {
+  name: "Ruturaj",
+  course: "MERN",
+};
+const { name: studentName, course } = student;
+console.log(studentName);
+console.log(course);
+
+// 📝 Practical Task 4
+const nums1 = [10, 20];
+const nums2 = [30, 40];
+const res = [...nums1, ...nums2];
+console.log(res);
+
+//⭐ Mini Project 1: Employee Profile
+const employee = {
+  name: "Ruturaj",
+  department: "Development",
+  salary: 50000,
+};
+const { name, department, salary } = employee;
+console.log(name);
+console.log(department);
+console.log(salary);
+
+// ⭐ Mini Project 2: Shopping Cart
+const cart1 = ["Laptop", "Mouse"];
+const cart2 = ["Keyboard", "Monitor"];
+const allProducts = [...cart1, ...cart2];
+console.log(allProducts);
