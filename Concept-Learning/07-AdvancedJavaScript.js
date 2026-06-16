@@ -145,3 +145,77 @@ const result = new Promise((resolve, reject) => {
 });
 
 result.then((data) => console.log(data)).catch((error) => console.log(error));
+
+//🚀 Module 7: Advanced JavaScript (Part 4)
+// Async & Await
+
+// 📝 Practical Task 1
+async function hello() {
+  return "JavaScript";
+}
+hello().then((data) => console.log(data)); //JavaScript
+
+//📝 Practical Task 2
+function getName() {
+  return new Promise((resolve) => {
+    resolve("Ruturaj");
+  });
+}
+
+async function printName() {
+  const res = await getName();
+  console.log(res);
+}
+printName();
+
+//📝 Practical Task 3
+function getCourse() {
+  return new Promise((resolve) => {
+    resolve("Full Stack Development");
+  });
+}
+
+async function printCourse() {
+  const res = await getCourse();
+  console.log(res);
+}
+printCourse();
+
+// 📝 Practical Task 4
+function getNumber() {
+  return new Promise((resolve) => {
+    resolve(100);
+  });
+}
+async function printNum() {
+  const res = await getNumber();
+  console.log(res);
+}
+printNum();
+
+//⭐ Mini Project 1: User Profile Loader
+function loadUser() {
+  return new Promise((resolve) => {
+    resolve("Ruturaj Powar");
+  });
+}
+async function printProfile() {
+  console.log("Loading User...");
+  const res = await loadUser();
+  console.log(res);
+}
+printProfile();
+
+// ⭐ Mini Project 2: Product Loader
+function loadProduct() {
+  return new Promise((resolve) => {
+    resolve("Laptop");
+  });
+}
+
+async function printProduct() {
+  console.log("Loading Product...");
+  const res = await loadProduct();
+  console.log(res);
+}
+printProduct();
