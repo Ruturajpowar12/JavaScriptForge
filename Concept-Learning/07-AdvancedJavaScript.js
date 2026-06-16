@@ -29,3 +29,48 @@ saybye();
 function saybye() {
   console.log("hello");
 }
+
+//🚀 Module 7: Advanced JavaScript (Part 2)
+// Callbacks
+
+// Practical Task 1
+function greet(sentence) {
+  console.log(sentence);
+}
+function welcome(callback) {
+  callback("Welcome to JavaScript");
+}
+welcome(greet);
+
+//Practical Task 2
+function executeTask(task) {
+  task("Learning Callbacks");
+}
+executeTask(greet);
+
+//Practical Task 3
+function calculator(a, b, operation) {
+  operation(a, b);
+}
+calculator(10, 5, function (x, y) {
+  console.log(x * y);
+});
+
+//Practical Task 4
+function processStudent(name, callback) {
+  callback(name);
+}
+
+processStudent("Ruturaj", function (studentName) {
+  console.log("Student:", studentName);
+});
+
+//Mini project
+function orderFood(food, callback) {
+  console.log("Preparing " + food + "...");
+  callback();
+}
+
+orderFood("Pizza", function () {
+  console.log("Pizza Ready!");
+});
