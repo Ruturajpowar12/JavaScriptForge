@@ -502,3 +502,30 @@ const cart1 = ["Laptop", "Mouse"];
 const cart2 = ["Keyboard", "Monitor"];
 const allProducts = [...cart1, ...cart2];
 console.log(allProducts);
+
+//🚀 Module 7: Advanced JavaScript (Part 10)
+// Modules
+
+// Main concepts:
+// export
+// import
+// Named Export
+// Default Export
+
+//Example 1: Named Export
+// math.js
+export const add = (a, b) => a + b;
+export const sub = (a, b) => a - b;
+// app.js
+import { add, sub } from "./math.js";
+console.log(add(10, 5));
+console.log(sub(10, 5));
+
+//Example 2: Default Export
+// user.js
+export default function greet() {
+  console.log("Hello");
+}
+// app.js
+import greet from "./user.js";
+greet();
