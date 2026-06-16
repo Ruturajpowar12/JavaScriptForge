@@ -320,7 +320,7 @@ console.log(res);
 const marks = [50, 60, 70, 80];
 const res = marks.reduce((total, curr) => {
   return total + curr;
-});
+}, 0);
 console.log(res);
 
 //⭐ Mini Project 1: Product Price Calculator
@@ -335,12 +335,8 @@ console.log(result);
 //⭐ Mini Project 2: Student Result Analyzer
 const marks = [25, 40, 55, 80, 30, 95];
 
-const useFilter = marks.filter((mark) => mark >= 35);
-const useReduce = marks.reduce((tot, curr) => tot + curr);
-const res = marks
+const total = marks
   .filter((mark) => mark >= 35)
-  .reduce((tot, curr) => tot + curr);
+  .reduce((tot, curr) => tot + curr, 0);
 
-console.log(useFilter);
-console.log(useReduce);
-console.log(res);
+console.log(total);
