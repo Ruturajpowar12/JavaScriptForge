@@ -340,3 +340,65 @@ const total = marks
   .reduce((tot, curr) => tot + curr, 0);
 
 console.log(total);
+
+//🚀 Module 7: Advanced JavaScript (Part 7)
+// this Keyword
+
+//📝 Practical Task 1
+const person = {
+  name: "Ruturaj",
+  show() {
+    console.log(this.name);
+  },
+};
+person.show();
+//Ruturaj
+
+// 📝 Practical Task 2
+const emp = {
+  course: "MERN Stack",
+  show() {
+    console.log(this.course);
+  },
+};
+emp.show();
+
+// 📝 Practical Task 3
+const mobile = {
+  brand: "Apple",
+  showBrand() {
+    console.log(`Brand: ${this.brand}`);
+  },
+};
+mobile.showBrand();
+
+// 📝 Practical Task 4
+const info = {
+  city: "Pune",
+  showCity() {
+    console.log(`I live in ${this.city}`);
+  },
+};
+info.showCity();
+
+//⭐ Mini Project 1: User Profile
+const user = {
+  name: "Ruturaj",
+  age: 22,
+  showProfile() {
+    console.log(`Name: ${this.name}`);
+    console.log(`Age: ${this.age}`);
+  },
+};
+user.showProfile();
+
+// ⭐ Mini Project 2: Bank Account
+const bank = {
+  owner: "Ruturaj",
+  balance: 5000,
+  showAccount() {
+    console.log(`Owner: ${this.owner}`);
+    console.log(`Balance: ${this.balance}`);
+  },
+};
+bank.showAccount();
