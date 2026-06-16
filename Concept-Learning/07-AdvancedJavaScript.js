@@ -219,3 +219,81 @@ async function printProduct() {
   console.log(res);
 }
 printProduct();
+
+// 🚀 Module 7: Advanced JavaScript (Part 5)
+// Closures
+
+// 📝 Practical Task 1
+
+function outer() {
+  let language = "JavaScript";
+  function inner() {
+    console.log(language);
+  }
+  return inner;
+}
+const result = outer();
+result(); //JavaScript
+
+// 📝 Practical Task 2
+function outer() {
+  let course = "MERN Stack";
+  function inner() {
+    console.log(course);
+  }
+  return inner;
+}
+const result1 = outer();
+result1();
+
+// 📝 Practical Task 3
+function number() {
+  let num = 10;
+  return function () {
+    num++;
+    console.log(num);
+  };
+}
+const res = number();
+res();
+res();
+res();
+
+// 📝 Practical Task 4
+function student() {
+  let name = "Ruturaj";
+  return function () {
+    console.log(name);
+  };
+}
+const res2 = student();
+res2();
+
+//⭐ Mini Project 1: Bank Balance
+function bankBalace(balanace) {
+  let bal = balanace;
+  return function (amt) {
+    bal = bal + amt;
+    console.log(bal);
+  };
+}
+const deposit = bankBalace(1000);
+deposit(500);
+deposit(500);
+deposit(500);
+
+//⭐ Mini Project 2: Like Counter
+function likeCounter() {
+  let like = 0;
+  return function () {
+    like++;
+    console.log(like);
+  };
+}
+
+const like = likeCounter();
+like();
+like();
+like();
+like();
+like();
