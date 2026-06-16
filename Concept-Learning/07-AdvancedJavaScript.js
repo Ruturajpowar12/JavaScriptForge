@@ -74,3 +74,74 @@ function orderFood(food, callback) {
 orderFood("Pizza", function () {
   console.log("Pizza Ready!");
 });
+
+// 🚀 Module 7: Advanced JavaScript (Part 3)
+// Promises
+
+// 📝 Practical Task 1
+const myPromise = new Promise((resolve) => {
+  resolve("JavaScript");
+});
+myPromise.then((data) => {
+  console.log(data);
+});
+//JavaScript
+
+// 📝 Practical Task 2
+const myPromise1 = new Promise((resolve, reject) => {
+  resolve("Learning Promises");
+});
+myPromise1
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+// 📝 Practical Task 3
+const check = new Promise((resolve, reject) => {
+  const age = 10;
+  if (age >= 18) {
+    resolve("Eligible");
+  } else {
+    reject("Not Eligible");
+  }
+});
+
+check.then((data) => console.log(data)).catch((error) => console.log(error));
+
+//📝 Practical Task 4
+
+const checkEvenOdd = new Promise((resolve, reject) => {
+  let num = 13;
+  if (num % 2 === 0) {
+    resolve("Even Number");
+  } else {
+    reject("Odd Number");
+  }
+});
+
+checkEvenOdd
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error));
+
+// ⭐ Mini Project 1: Food Delivery System
+const food = new Promise((resolve, reject) => {
+  console.log("Preparing Pizza...");
+  resolve("Pizza Delivered");
+});
+
+food.then((data) => console.log(data)).catch((error) => console.log(error));
+
+//⭐ Mini Project 2: Exam Result System
+const result = new Promise((resolve, reject) => {
+  let marks = 75;
+  if (marks >= 35) {
+    resolve("Pass");
+  } else {
+    reject("Fail");
+  }
+});
+
+result.then((data) => console.log(data)).catch((error) => console.log(error));
