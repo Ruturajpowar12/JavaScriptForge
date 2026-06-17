@@ -163,3 +163,205 @@ arr2.forEach((val) => {
   }
 });
 console.log(second);
+
+// ---------- 🟡 MEDIUM (16-35) ----------
+
+// Q16
+// Create an array of products.
+// Each product should contain name and price.
+// Print products whose price is greater than 1000.
+const arr = [
+  {
+    name: "watch",
+    price: 2000,
+  },
+  {
+    name: "pant",
+    price: 1700,
+  },
+  {
+    name: "shirt",
+    price: 800,
+  },
+  {
+    name: "napkin",
+    price: 600,
+  },
+  {
+    name: "shoes",
+    price: 3000,
+  },
+];
+
+const res = arr.filter((val) => {
+  return val.price > 1000;
+});
+console.log(res);
+
+// Q17
+// Create a function that counts vowels in a string.
+
+function vowelCounter(str) {
+  let count = 0;
+  for (let val of str) {
+    if (
+      val === "a" ||
+      val === "A" ||
+      val === "e" ||
+      val === "E" ||
+      val === "i" ||
+      val === "I" ||
+      val === "o" ||
+      val === "O" ||
+      val === "u" ||
+      val === "U"
+    ) {
+      count++;
+    }
+  }
+  console.log("Vowels are ", count);
+}
+vowelCounter("Ruturaj");
+
+// Q18
+// Create an array of numbers and print numbers that are divisible by both 3 and 5.
+const numbers1 = [3, 15, 30, 20, 75, 92, 90];
+const res = numbers1.filter((val) => val % 3 === 0 && val % 5 === 0);
+console.log(res);
+
+// Q19
+// Create an array of strings and print the longest string.
+const strings = ["apple", "banana", "watermelon", "cherry"];
+let longest = "";
+for (let str of strings) {
+  if (str.length > longest.length) {
+    longest = str;
+  }
+}
+console.log(longest);
+
+// Q20
+// Create a function that checks whether a string is a palindrome.
+function isPalindrome(str) {
+  const original = str;
+  const reversed = str.split("").reverse().join("");
+  return original === reversed;
+}
+console.log(isPalindrome("dad"));
+
+// Q21
+// Create an object containing 5 subjects and calculate total and average marks.
+const studentMarks = {
+  math: 85,
+  science: 90,
+  english: 78,
+  history: 92,
+  geography: 88,
+};
+const marks = Object.values(studentMarks);
+const total = marks.reduce((sum, mark) => sum + mark, 0);
+const average = total / marks.length;
+console.log("Total Marks:", total);
+console.log("Average Marks:", average);
+// Q22
+// Create an array of users.
+// Sort users by age in ascending order.
+
+// Q23
+// Create a counter system that can increment and decrement values.
+
+// Q24
+// Create a function that accepts a sentence and count total words.
+
+// Q25
+// Create an array of prices and apply a 10% discount.
+
+// Q26
+// Create an array and rotate it one position to the right.
+
+// Q27
+// Create an object representing a movie and print all keys only.
+
+// Q28
+// Create a function that swaps two numbers without creating a third variable.
+
+// Q29
+// Create an array of numbers and print frequency of each number.
+
+// Q30
+// Create an array of employees and print employees older than 25.
+
+// Q31
+// Create a function that checks whether a number is prime.
+
+// Q32
+// Create an object representing a library.
+// Add an array of books and print book names.
+
+// Q33
+// Create an array and separate even and odd numbers.
+
+// Q34
+// Create a function that capitalizes the first letter of every word.
+
+// Q35
+// Create a timer that prints a message after 5 seconds.
+
+// ---------- 🔴 HARD (36-50) ----------
+
+// Q36
+// Create a user registration system.
+// Store users inside an array and prevent duplicate emails.
+
+// Q37
+// Fetch users and print only users whose website ends with ".org".
+
+// Q38
+// Create a shopping cart system.
+// Add items, remove items and calculate the total amount.
+
+// Q39
+// Create a function that groups words by their first letter.
+
+// Q40
+// Create a closure that tracks login attempts.
+
+// Q41
+// Fetch posts and print only titles containing more than 30 characters.
+
+// Q42
+// Create a Promise that simulates an online payment system.
+
+// Q43
+// Create a task manager using browser storage.
+// Add, retrieve and delete tasks.
+
+// Q44
+// Create a student management system.
+// Print topper, average and failed students.
+
+// Q45
+// Create a function that merges two arrays without duplicate values.
+
+// Q46
+// Fetch todos and count how many are completed and pending.
+
+// Q47
+// Create a countdown timer from 10 to 1 and then print "Time Up".
+
+// Q48
+// Create a bank account system.
+// Add deposit, withdraw and current balance operations.
+
+// Q49
+// Create a function that compares two objects and checks if they are equal.
+
+// Q50
+// Create a mini analytics system.
+// Given an array of users, print:
+// Total users
+// Active users
+// Inactive users
+// Average age
+// Youngest user
+// Oldest user
