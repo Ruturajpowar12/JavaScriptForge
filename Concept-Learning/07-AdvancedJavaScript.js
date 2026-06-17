@@ -529,3 +529,66 @@ export default function greet() {
 // app.js
 import greet from "./user.js";
 greet();
+
+// 🚀 Module 7: Advanced JavaScript (Part 11)
+// Error Handling
+
+// 📝 Practical Task 1
+try {
+  console.log(x);
+} catch (error) {
+  console.log("Variable not found");
+}
+
+// 📝 Practical Task 2
+try {
+  console.log(a);
+} catch (error) {
+  console.log("Something went wrong");
+}
+
+//📝 Practical Task 3
+try {
+  let age = 16;
+
+  if (age < 18) {
+    throw new Error("Not Eligible");
+  }
+  console.log("Eligible");
+} catch (error) {
+  console.log(error);
+}
+
+//📝 Practical Task 4
+try {
+  console.log("Starting");
+} catch (error) {
+  console.log(error);
+} finally {
+  console.log("Finished");
+}
+
+//⭐ Mini Project 1: ATM Withdrawal
+
+try {
+  let balance = 5000;
+  let withdraw = 7000;
+
+  if (withdraw > balance) {
+    throw new Error("Insufficient Balance");
+  }
+  console.log("Withdrawal Successful");
+} catch (error) {
+  console.log(error);
+}
+
+//⭐ Mini Project 2: Student Login
+try {
+  let username = "";
+  if (username === "") {
+    throw new Error("Username Required");
+  }
+  console.log("Login Successful");
+} catch (error) {
+  console.log(error);
+}
