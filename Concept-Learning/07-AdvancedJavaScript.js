@@ -635,3 +635,68 @@ console.log(age);
 localStorage.setItem("theme", "dark");
 const theme = localStorage.getItem("theme");
 console.log(theme);
+
+//🚀 Module 7: Advanced JavaScript (Part 13)
+// Fetch API
+// 📖 What is Fetch API?
+// Fetch API is used to get data from a server/API.
+
+// Main methods:
+// fetch()
+// .then()
+// .catch()
+// async/await
+
+// 📝 Practical Task 1
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+//object form data of post 1
+//   {
+//   userId: 1,
+//   id: 1,
+//   title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+//   body: 'quia et suscipit\n' +
+//     'suscipit recusandae consequuntur expedita et cum\n' +
+//     'reprehenderit molestiae ut ut quas totam\n' +
+//     'nostrum rerum est autem sunt rem eveniet architecto'
+// }
+
+//📝 Practical Task 2
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error.message));
+
+// 📝 Practical Task 3
+async function getData() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  const data = await response.json();
+  console.log(data);
+}
+getData();
+
+// 📝 Practical Task 4
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error.message));
+
+// ⭐ Mini Project 1: User Loader
+async function getUserData() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await response.json();
+  data.forEach((user) => console.log(user.name));
+}
+getUserData();
+
+//⭐ Mini Project 2: Todo Viewer
+async function getTopTodos() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await response.json();
+  data.slice(0, 5).forEach((todo) => {
+    console.log(todo.title);
+  });
+}
+
+getTopTodos();
