@@ -625,8 +625,8 @@ localStorage.clear();
 localStorage.setItem("name", "Ruturaj");
 localStorage.setItem("age", 22);
 
-const name = localStorage.name("name");
-const age = localStorage.name("age");
+const name = localStorage.getItem("name");
+const age = localStorage.getItem("age");
 console.log(name);
 console.log(age);
 
