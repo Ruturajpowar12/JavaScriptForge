@@ -55,3 +55,73 @@ const totalMarks = marks.reduce((total, curr) => {
   return total + curr;
 });
 console.log(totalMarks);
+
+// ---------- 🟡 MEDIUM (7-12) ----------
+
+// Q7
+// Create an array of prices.
+// Increase every price by 18% and print the new array.
+const prices = [100, 200, 300, 400, 500];
+const newPrices = prices.map((val) => {
+  const gst = val * (18 / 100);
+  return val + gst;
+});
+console.log(newPrices);
+
+// Q8
+// Create an array of student ages.
+// Print only students eligible for voting.
+const student = [20, 16, 25, 15, 17, 22];
+const eligibleForVote = student.filter((age) => {
+  return age > 18;
+});
+console.log(eligibleForVote);
+
+// Q9
+// Create an array of numbers.
+// Print the sum of all even numbers only.
+const numbers = [10, 23, 46, 32, 78, 21, 77];
+const result = numbers
+  .filter((val) => val % 2 === 0)
+  .reduce((tot, curr) => tot + curr);
+console.log(result);
+
+// Q10
+// Create a function that returns another function.
+// Every time it is called, increase a counter and print it.
+function outer() {
+  let count = 0;
+  return function () {
+    count++;
+    console.log(count);
+  };
+}
+const counter = outer();
+counter();
+counter();
+counter();
+
+// Q11
+// Create an asynchronous function that waits for a Promise and prints:
+// "Data Loaded Successfully"
+async function loadData() {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  console.log("Data Loaded Successfully");
+}
+loadData();
+
+// Q12
+// Create an object containing:
+// name
+// department
+// salary
+// Print all values after extracting them.
+const employee = {
+  name: "Ram",
+  department: "IT",
+  salary: 30000,
+};
+const { name, department, salary } = employee;
+console.log(name);
+console.log(department);
+console.log(salary);
