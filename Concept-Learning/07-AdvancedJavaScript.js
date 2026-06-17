@@ -556,14 +556,14 @@ try {
   }
   console.log("Eligible");
 } catch (error) {
-  console.log(error);
+  console.log(error.message);
 }
 
 //📝 Practical Task 4
 try {
   console.log("Starting");
 } catch (error) {
-  console.log(error);
+  console.log(error.message);
 } finally {
   console.log("Finished");
 }
@@ -579,7 +579,7 @@ try {
   }
   console.log("Withdrawal Successful");
 } catch (error) {
-  console.log(error);
+  console.log(error.message);
 }
 
 //⭐ Mini Project 2: Student Login
@@ -590,5 +590,5 @@ try {
   }
   console.log("Login Successful");
 } catch (error) {
-  console.log(error);
+  console.log(error.message);
 }
