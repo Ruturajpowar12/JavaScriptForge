@@ -592,3 +592,46 @@ try {
 } catch (error) {
   console.log(error.message);
 }
+
+//🚀 Module 7: Advanced JavaScript (Part 12)
+
+// Local Storage
+// 📖 What is Local Storage?
+// Local Storage allows us to store data in the browser.
+// Data remains even after closing the browser.
+
+// Main methods:
+// setItem()
+// getItem()
+// removeItem()
+// clear()
+
+//📝 Practical Task 1
+localStorage.setItem("name", "Ruturaj");
+
+//📝 Practical Task 2
+const data = localStorage.getItem("name");
+console.log(data);
+
+// 📝 Practical Task 3
+localStorage.setItem("course", "MERN Stack");
+localStorage.removeItem("course");
+
+//📝 Practical Task 4
+localStorage.setItem("city", "Pune");
+localStorage.clear();
+
+//⭐ Mini Project 1: User Profile Storage
+localStorage.setItem("name", "Ruturaj");
+localStorage.setItem("age", 22);
+
+const name = localStorage.name("name");
+const age = localStorage.name("age");
+console.log(name);
+console.log(age);
+
+// ⭐ Mini Project 2: Theme Preference
+
+localStorage.setItem("theme", "dark");
+const theme = localStorage.getItem("theme");
+console.log(theme);
