@@ -73,7 +73,7 @@ console.log(newPrices);
 // Print only students eligible for voting.
 const student = [20, 16, 25, 15, 17, 22];
 const eligibleForVote = student.filter((age) => {
-  return age > 18;
+  return age >= 18;
 });
 console.log(eligibleForVote);
 
@@ -125,3 +125,170 @@ const { name, department, salary } = employee;
 console.log(name);
 console.log(department);
 console.log(salary);
+
+// ---------- 🔴 HARD (13-20) ----------
+
+// Q13
+// Create an array of users.
+// Each user should have:
+// name
+// age
+// Filter users whose age is greater than or equal to 18
+// Print only their names.
+const users = [
+  {
+    name: "Ram",
+    age: 20,
+  },
+  {
+    name: "Ruturaj",
+    age: 22,
+  },
+  {
+    name: "Swarup",
+    age: 17,
+  },
+];
+const res = users
+  .filter((user) => {
+    return user.age >= 18;
+  })
+  .map((val) => {
+    return val.name;
+  });
+console.log(res);
+
+// Q14
+// Create a bank balance system.
+// Initial balance = 1000
+// Every call should add a deposit amount and print the latest balance.
+function BankBalance(InitialBalance) {
+  let balance = InitialBalance; // let balance = 1000
+  return function (amount) {
+    balance = balance + amount;
+    console.log("latest balance: ", balance);
+  };
+}
+const deposit = BankBalance(1000);
+deposit(500);
+deposit(300);
+
+// Q15
+// Create a shopping cart containing product prices.
+// Print:
+// Total price
+// Average price
+// Highest price
+// Lowest price
+
+function shoppingCart(cart) {
+  if (cart.length === 0) {
+    console.log("The cart is empty.");
+    return;
+  }
+
+  const totalPrice = cart.reduce((tot, curr) => tot + curr, 0);
+  console.log(`Total Price: ${totalPrice}`);
+
+  const averagePrice = totalPrice / cart.length;
+  console.log(`Average Price: ${averagePrice}`);
+
+  let high = cart[0];
+  cart.forEach((val) => {
+    if (val > high) {
+      high = val;
+    }
+  });
+  console.log(`Highest price: ${high}`);
+
+  let low = cart[0];
+  cart.forEach((val) => {
+    if (val < low) {
+      low = val;
+    }
+  });
+  console.log(`Lowest Price: ${low}`);
+}
+
+const prices = [110, 220, 330, 440, 550];
+shoppingCart(prices);
+
+// Q16
+// Create a Promise.
+// If marks are greater than or equal to 35,
+// print "Pass"
+// otherwise print "Fail"
+const checkMarks = new Promise((resolve, reject) => {
+  const marks = 42;
+  if (marks >= 35) {
+    resolve("Pass");
+  } else {
+    reject("Fail");
+  }
+});
+checkMarks.then((data) => console.log(data));
+
+// Q17
+// Fetch users from:
+// https://jsonplaceholder.typicode.com/users
+// Print only:
+// name
+// email
+async function getData() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await response.json();
+  data.forEach((user) => {
+    console.log(`Name: ${user.name}\nEmail: ${user.email}\n`);
+  });
+}
+getData();
+// Q18
+// Store the following in browser storage:
+// username = Ruturaj
+// course = Full Stack Development
+// Retrieve and print both values.
+localStorage.setItem("username", "Ruturaj");
+localStorage.setItem("course", "Full Stack Development");
+
+const name = localStorage.getItem("username");
+const course = localStorage.getItem("course");
+console.log(name);
+console.log(course);
+
+// Q19
+// Create an object representing a company.
+// Add:
+// companyName
+// employees
+// location
+// Create a method that prints all details using object properties.
+const company = {
+  companyName: "Nike",
+  employees: 200,
+  location: "Londaon",
+  allDetails() {
+    console.log(`Company Name: ${this.companyName}`);
+    console.log(`Employess: ${this.employees}`);
+    console.log(`Location: ${this.location}`);
+  },
+};
+company.allDetails();
+
+// Q20
+// Fetch todos from:
+// https://jsonplaceholder.typicode.com/todos
+// Print only completed todo titles.
+//```
+
+async function getTitles() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await response.json();
+
+  data.forEach((todo) => {
+    if (todo.completed) {
+      console.log(`${todo.id} : ${todo.title}`);
+    }
+  });
+}
+
+getTitles();
