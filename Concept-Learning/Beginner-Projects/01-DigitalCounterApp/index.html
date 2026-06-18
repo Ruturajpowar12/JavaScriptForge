@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-DigitalCounterApp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="h-screen w-full bg-linear-to-tr from-red-500 to-yellow-200 flex justify-center items-center"
+  >
+    <div class="card w-110 bg-base-100 p-5 shadow-xl">
+      <div class="card-body">
+        <h1 id="num" class="text-center font-bold text-[100px] my-10">0</h1>
+        <div class="card-action flex justify-center gap-8">
+          <button id="increase" class="btn btn-primary">Increase</button>
+          <button id="reset" class="btn btn-primary">Reset</button>
+          <button id="decrease" class="btn btn-primary">Decrease</button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
