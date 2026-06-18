@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-AgeCalculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="h-screen w-full bg-linear-to-tl from-cyan-200 to-pink-400 flex justify-center items-center"
+  >
+    <div class="card w-110 bg-base-100 shadow-xl">
+      <div class="card-body">
+        <input
+          type="text"
+          class="input input-accent text-cyan-700 w-full pika-single"
+          id="myDatepicker"
+          placeholder="Pick your Birth Date "
+        />
+        <div class="card-action">
+          <button
+            class="btn btn-secondary w-full mt-2"
+            onclick="my_modal_1.showModal()"
+            id="btn"
+          >
+            Calculate your Age
+          </button>
+          <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+              <h3 class="text-lg font-bold text-pink-500">Your Age are</h3>
+              <p id="dis" class="py-4 text-cyan-600"></p>
+              <div class="modal-action">
+                <form method="dialog">
+                  <button class="btn btn-secondary">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
