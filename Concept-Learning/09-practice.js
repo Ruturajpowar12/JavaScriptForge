@@ -442,3 +442,287 @@ console.log(capitalizeWords("hello team"));
 setTimeout(() => {
   console.log("Hello EveryOne!");
 }, 5000);
+// ---------- 🔴 HARD (36-50) ----------
+
+// Q36
+// Create a user registration system.
+// Store users inside an array and prevent duplicate emails.
+const users = [];
+function registerUser(name, email) {
+  const exists = users.some((user) => user.email === email);
+  if (exists) return "Email already registered";
+  users.push({ name, email });
+  return "Registration successful";
+}
+registerUser("Ruturaj", "Ruturaj@gmail.com");
+console.log(users);
+
+// Q37
+// Fetch users and print only users whose website ends with ".org".
+async function fetchOrgUsers() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await response.json();
+  const orgUsers = data.filter((user) => user.website.endsWith(".org"));
+  console.log(orgUsers);
+}
+fetchOrgUsers();
+// Q38
+// Create a shopping cart system.
+// Add items, remove items and calculate the total amount.
+const cart = {
+  items: [],
+  addItem(name, price) {
+    this.items.push({ name, price });
+  },
+  removeItem(name) {
+    this.items = this.items.filter((item) => item.name !== name);
+  },
+  getTotal() {
+    return this.items.reduce((total, item) => total + item.price, 0);
+  },
+};
+cart.addItem("ram", 200);
+console.log(cart.items);
+
+// Q39
+// Create a function that groups words by their first letter.
+function groupByFirstLetter(words) {
+  return words.reduce((acc, word) => {
+    const firstLetter = word[0].toLowerCase();
+    if (!acc[firstLetter]) acc[firstLetter] = [];
+    acc[firstLetter].push(word);
+    return acc;
+  }, {});
+}
+const words = ["ram", "shyam", "vir"];
+console.log(groupByFirstLetter(words));
+
+// Q40
+// Create a closure that tracks login attempts.
+function createLoginTracker(maxAttempts) {
+  let attempts = 0;
+  return function (password) {
+    if (attempts >= maxAttempts) {
+      return "Access Denied: Account is permanently locked.";
+    }
+    if (password === "secret123") {
+      attempts = 0;
+      return "Login Successful!";
+    } else {
+      attempts++;
+      if (attempts >= maxAttempts) {
+        return "Account Locked: Too many failed attempts.";
+      }
+      return `Incorrect password. Remaining attempts: ${maxAttempts - attempts}`;
+    }
+  };
+}
+const login = createLoginTracker(3);
+console.log(login("wrong1"));
+console.log(login("wrong2"));
+console.log(login("secret123"));
+
+// Q41
+// Fetch posts and print only titles containing more than 30 characters.
+async function fetchLongTitles() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const posts = await response.json();
+
+    const filteredTitles = posts
+      .filter((post) => post.title.length > 30)
+      .map((post) => `(${post.title.length} chars) ${post.title}`);
+  } catch (error) {
+    console.error("Error loading posts:", error);
+  }
+}
+fetchLongTitles();
+
+// Q42
+// Create a Promise that simulates an online payment system.
+function processPayment(amount) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (amount > 0) resolve(`Payment of $${amount} successful`);
+      else reject("Invalid amount");
+    }, 1500);
+  });
+}
+processPayment(2000);
+
+// Q43
+// Create a task manager using browser storage.
+// Add, retrieve and delete tasks.
+const taskManager = {
+  storageKey: "user_tasks",
+  getAll() {
+    try {
+      return JSON.parse(localStorage.getItem(this.storageKey)) || [];
+    } catch {
+      return [];
+    }
+  },
+  add(task) {
+    if (!task) return "Task cannot be empty";
+    const tasks = this.getAll();
+    tasks.push({ id: Date.now(), title: task });
+    localStorage.setItem(this.storageKey, JSON.stringify(tasks));
+    return "Task Added";
+  },
+  delete(id) {
+    const tasks = this.getAll().filter((task) => task.id !== id);
+    localStorage.setItem(this.storageKey, JSON.stringify(tasks));
+    return "Task Deleted";
+  },
+};
+taskManager.add("Learn JavaScript");
+console.log(taskManager.getAll());
+// Q44
+// Create a student management system.
+// Print topper, average and failed students.
+function analyzeStudents(students) {
+  let topper = students[0];
+  let totalMarks = 0;
+  const failed = [];
+  for (let student of students) {
+    totalMarks += student.marks;
+    if (student.marks > topper.marks) {
+      topper = student;
+    }
+    if (student.marks < 40) {
+      failed.push(student.name);
+    }
+  }
+  const average = totalMarks / students.length;
+  console.log(`Top Performer  : ${topper.name} (${topper.marks} marks)`);
+  console.log(`Class Average  : ${average.toFixed(2)}`);
+  console.log(
+    `Failed Students: ${failed.length > 0 ? failed.join(", ") : "None"}`,
+  );
+}
+const classData = [
+  { name: "Amit", marks: 85 },
+  { name: "Rahul", marks: 35 },
+  { name: "Priya", marks: 92 },
+  { name: "Soniya", marks: 38 },
+];
+
+analyzeStudents(classData);
+// Q45
+// Create a function that merges two arrays without duplicate values.
+function mergeArrays(arr1, arr2) {
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+    return "Both inputs must be valid arrays";
+  }
+  const combined = [...arr1, ...arr2];
+  const uniqueResult = Array.from(new Set(combined));
+  return uniqueResult;
+}
+const numbers1 = [1, 2, 3, 4, 5];
+const numbers2 = [4, 5, 6, 7, 8];
+console.log(mergeArrays(numbers1, numbers2));
+// Q46
+// Fetch todos and count how many are completed and pending.
+async function countTodos() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+    const todos = await response.json();
+
+    let completedCount = 0;
+    let pendingCount = 0;
+
+    todos.forEach((todo) => {
+      if (todo.completed) {
+        completedCount++;
+      } else {
+        pendingCount++;
+      }
+    });
+    console.log(`Total Todos   : ${todos.length}`);
+    console.log(`Completed     : ${completedCount}`);
+    console.log(`Pending/Open  : ${pendingCount}`);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+countTodos();
+// Q47
+// Create a countdown timer from 10 to 1 and then print "Time Up".
+function countdown(startFrom = 10) {
+  let count = startFrom;
+  console.log(`Timer initialized for ${startFrom} seconds...`);
+  const timer = setInterval(() => {
+    if (count > 0) {
+      console.log(`Remaining: ${count}`);
+      count--;
+    } else {
+      console.log("🚨 Time Up! 🚨");
+      clearInterval(timer);
+    }
+  }, 1000);
+}
+countdown(5);
+// Q48
+// Create a bank account system.
+// Add deposit, withdraw and current balance operations.
+function createBankAccount(initialBalance = 0) {
+  let balance = initialBalance;
+
+  return {
+    deposit(amount) {
+      balance += amount;
+      return `Deposited: $${amount}. Current Balance: $${balance}`;
+    },
+    withdraw(amount) {
+      if (amount > balance) return "Insufficient funds configuration.";
+      balance -= amount;
+      return `Withdrew: $${amount}. Remaining Balance: $${balance}`;
+    },
+    getBalance() {
+      return `Current Available Balance: $${balance}`;
+    },
+  };
+}
+const myAccount = createBankAccount(500);
+console.log(myAccount.deposit(200));
+console.log(myAccount.withdraw(100));
+console.log(myAccount.withdraw(1000));
+console.log(myAccount.getBalance());
+
+// Q50
+// Create a mini analytics system.
+// Given an array of users, print:
+// Total users
+// Active users
+// Inactive users
+// Average age
+// Youngest user
+// Oldest user
+function runAnalytics(arr) {
+  const totalUsers = arr.length;
+  const ActiveUsers = arr.filter((val) => val.status === "active").length;
+  const InactiveUsers = arr.filter((val) => val.status !== "active").length;
+  const total = arr.reduce((tot, curr) => {
+    return tot + curr.age;
+  }, 0);
+  const averageAge = total / arr.length;
+  const ages = arr.map((u) => u.age);
+  const youngest = Math.min(...ages);
+  const oldest = Math.max(...ages);
+  console.log(`Total System Users : ${totalUsers}`);
+  console.log(`Active Metrics     : ${ActiveUsers}`);
+  console.log(`Inactive Metrics   : ${InactiveUsers}`);
+  console.log(`Average  Age : ${averageAge}`);
+  console.log(`Youngest Recorded  : ${youngest} years old`);
+  console.log(`Oldest Recorded    : ${oldest} years old`);
+}
+
+const currentUsers = [
+  { id: 1, name: "A", age: 22, status: "active" },
+  { id: 2, name: "B", age: 34, status: "inactive" },
+  { id: 3, name: "C", age: 19, status: "active" },
+  { id: 4, name: "D", age: 45, status: "active" },
+];
+
+runAnalytics(currentUsers);
