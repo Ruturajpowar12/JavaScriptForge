@@ -266,102 +266,179 @@ console.log("Average Marks:", average);
 // Q22
 // Create an array of users.
 // Sort users by age in ascending order.
+const users = [
+  { name: "Ruturaj", age: 22 },
+  { name: "Amit", age: 18 },
+  { name: "Jeet", age: 19 },
+];
+
+const newUser = users.sort((a, b) => a.age - b.age);
+console.log(newUser);
 
 // Q23
 // Create a counter system that can increment and decrement values.
+function counterFun(initialValue = 0) {
+  let count = initialValue;
+
+  return {
+    increment() {
+      count++;
+      return count;
+    },
+    decrement() {
+      count--;
+      return count;
+    },
+  };
+}
+const counter = counterFun();
+console.log(counter.increment());
+console.log(counter.increment());
+console.log(counter.decrement());
+console.log(counter.decrement());
 
 // Q24
 // Create a function that accepts a sentence and count total words.
+function countSentence(str) {
+  const sentence = str.trim();
+  let count = 0;
+  for (let val of sentence) {
+    if (val !== " ") {
+      count++;
+    }
+  }
+  console.log(`Total Words is ${count}`);
+}
+
+countSentence("I am Ruturaj. I am From Kolhapur");
 
 // Q25
 // Create an array of prices and apply a 10% discount.
+const prices = [100, 200, 300, 400, 500];
+const finalPrice = prices.map((price) => {
+  const discount = price * (10 / 100);
+  return price - discount;
+});
+console.log(finalPrice);
 
 // Q26
 // Create an array and rotate it one position to the right.
+const originalArray = [10, 20, 30, 40, 50];
+const rotated = [...originalArray];
+
+const last = rotated.pop();
+const add = rotated.unshift(last);
+console.log(rotated);
 
 // Q27
 // Create an object representing a movie and print all keys only.
+const movie = {
+  title: "Inception",
+  director: "Christopher Nolan",
+  releaseYear: 2010,
+  genres: ["Sci-Fi", "Action", "Thriller"],
+  durationInMinutes: 148,
+  isReleased: true,
+  rating: 8.8,
+};
+console.log(Object.keys(movie));
 
 // Q28
 // Create a function that swaps two numbers without creating a third variable.
+function swapNumbers(a, b) {
+  console.log(`Original : ${a} ${b}`);
+  [a, b] = [b, a];
+  console.log(`Swap : ${a} ${b}`);
+}
+swapNumbers(10, 20);
 
 // Q29
 // Create an array of numbers and print frequency of each number.
+const numbers = [1, 2, 2, 3, 3, 3, 4, 1, 2, 5];
+
+const frequency = numbers.reduce((acc, curr) => {
+  acc[curr] = (acc[curr] || 0) + 1;
+  return acc;
+}, {});
+
+console.log(frequency);
 
 // Q30
 // Create an array of employees and print employees older than 25.
+const employees = [
+  { name: "Amit", age: 22 },
+  { name: "Ruturaj", age: 28 },
+  { name: "Jeet", age: 30 },
+  { name: "Pooja", age: 24 },
+];
+const olderThan25 = employees.filter((val) => {
+  return val.age > 25;
+});
+console.log(olderThan25);
 
 // Q31
 // Create a function that checks whether a number is prime.
+function isPrime(num) {
+  if (num <= 1) return false;
 
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+
+  return true;
+}
+console.log(isPrime(31));
 // Q32
 // Create an object representing a library.
 // Add an array of books and print book names.
+const library = {
+  name: "City Central Library",
+  location: "Downtown",
+};
+
+library.books = [
+  {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    isbn: "9780743273565",
+  },
+  {
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    isbn: "9780061120084",
+  },
+  { title: "1984", author: "George Orwell", isbn: "9780451524935" },
+];
+
+const booksName = library["books"].map((val) => {
+  return val.title;
+});
+console.log(booksName);
 
 // Q33
 // Create an array and separate even and odd numbers.
+const numbers = [12, 5, 8, 13, 21, 44, 7];
+const even = numbers.filter((val) => val % 2 === 0);
+const Odd = numbers.filter((val) => val % 2 !== 0);
+console.log("Even Numbers:", even);
+console.log("Odd Numbers:", Odd);
 
 // Q34
 // Create a function that capitalizes the first letter of every word.
+function capitalizeWords(str) {
+  let words = str.split(" ");
 
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+  }
+
+  return words.join(" ");
+}
+
+console.log(capitalizeWords("ram"));
+console.log(capitalizeWords("hello team"));
 // Q35
 // Create a timer that prints a message after 5 seconds.
-
-// ---------- 🔴 HARD (36-50) ----------
-
-// Q36
-// Create a user registration system.
-// Store users inside an array and prevent duplicate emails.
-
-// Q37
-// Fetch users and print only users whose website ends with ".org".
-
-// Q38
-// Create a shopping cart system.
-// Add items, remove items and calculate the total amount.
-
-// Q39
-// Create a function that groups words by their first letter.
-
-// Q40
-// Create a closure that tracks login attempts.
-
-// Q41
-// Fetch posts and print only titles containing more than 30 characters.
-
-// Q42
-// Create a Promise that simulates an online payment system.
-
-// Q43
-// Create a task manager using browser storage.
-// Add, retrieve and delete tasks.
-
-// Q44
-// Create a student management system.
-// Print topper, average and failed students.
-
-// Q45
-// Create a function that merges two arrays without duplicate values.
-
-// Q46
-// Fetch todos and count how many are completed and pending.
-
-// Q47
-// Create a countdown timer from 10 to 1 and then print "Time Up".
-
-// Q48
-// Create a bank account system.
-// Add deposit, withdraw and current balance operations.
-
-// Q49
-// Create a function that compares two objects and checks if they are equal.
-
-// Q50
-// Create a mini analytics system.
-// Given an array of users, print:
-// Total users
-// Active users
-// Inactive users
-// Average age
-// Youngest user
-// Oldest user
+setTimeout(() => {
+  console.log("Hello EveryOne!");
+}, 5000);
