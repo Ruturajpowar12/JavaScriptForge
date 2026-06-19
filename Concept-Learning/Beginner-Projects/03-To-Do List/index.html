@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-To-DoList</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-straight/css/uicons-bold-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="h-screen w-full bg-linear-to-tl from-pink-400 to-cyan-500 flex justify-center flex-col gap-6 items-center overflow-y-auto py-10"
+  >
+    <div class="box1 bg-white w-130 p-5 rounded-lg shadow-lg flex flex-col">
+      <input
+        type="text"
+        placeholder="Enter your task..."
+        id="todo"
+        class="bg-gray-300 p-3 rounded w-full mb-3 pl-4 outline-none no-border"
+      />
+      <button
+        id="add"
+        class="bg-cyan-300 p-2 rounded shadow-lg font-semibold focus:bg-cyan-400 cursor-pointer"
+      >
+        Add
+      </button>
+    </div>
+
+    <div class="box2 bg-white w-130 p-5 rounded-lg shadow-lg">
+      <h2 class="font-bold text-lg mb-3 text-gray-700">Active Tasks</h2>
+      <ul id="task-list" class="flex flex-col gap-4"></ul>
+    </div>
+
+    <div class="box3 bg-white w-130 p-5 rounded-lg shadow-lg">
+      <div class="flex justify-between items-center mb-3">
+        <h2 class="font-bold text-lg text-gray-700">Storage Viewer (JSON)</h2>
+        <button
+          id="clear-storage"
+          class="bg-red-500 text-white text-xs px-2 py-1 rounded cursor-pointer hover:bg-red-600"
+        >
+          Clear Storage
+        </button>
+      </div>
+      <pre
+        id="storage-view"
+        class="bg-gray-800 text-green-400 p-3 rounded font-mono text-sm overflow-x-auto max-h-40"
+      ></pre>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
