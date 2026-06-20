@@ -140,3 +140,54 @@ function getProfile() {
   });
 }
 login().then(getProfile);
+
+// Task1
+async function hello() {
+  return "Hello JavaScript";
+}
+hello().then((message) => {
+  console.log(message);
+});
+
+//task2
+function fetchProduct() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Laptop");
+    }, 2000);
+  });
+}
+async function getProduct() {
+  const product = await fetchProduct();
+  console.log(product);
+}
+getProduct();
+
+//task3 //task4
+async function getData() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    if (!response.ok) {
+      throw new Error("API failed");
+    }
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+getData();
+
+// task5
+async function test() {
+  console.log(1);
+  await Promise.resolve();
+  console.log(2);
+}
+console.log(3);
+test();
+console.log(4);
+// 3
+// 1
+//4
+//2
