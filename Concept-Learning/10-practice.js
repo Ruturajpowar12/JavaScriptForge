@@ -51,10 +51,9 @@ const userId = users.find((user) => user.name === "Emma");
 console.log(userId);
 
 //task4
-const averageAge = users.reduce((acc, curr) => {
-  const Total = acc + curr.age;
-  return Math.floor(Total / users.length);
-}, 0);
+const totalAge = users.reduce((total, user) => total + user.age, 0);
+const averageAge = totalAge / users.length;
+
 console.log(averageAge);
 
 // /task5
