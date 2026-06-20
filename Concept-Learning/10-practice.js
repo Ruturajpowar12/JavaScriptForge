@@ -72,7 +72,71 @@ const data = [
 ];
 
 const countDepartments = data.reduce((acc, field) => {
-  acc[field] = (acc[field] || 0) + 1;
+  const dept = field.department;
+  acc[dept] = (acc[dept] || 0) + 1;
   return acc;
 }, {});
 console.log(countDepartments);
+
+//Task 1 (Event Loop)
+
+console.log("A");
+setTimeout(() => {
+  console.log("B");
+}, 0);
+console.log("C");
+//A
+// C
+// B
+
+//task2
+console.log(1);
+setTimeout(() => {
+  console.log(2);
+}, 1000);
+console.log(3);
+console.log(4);
+//1
+// 3
+// 4
+// 2
+
+//task3
+
+const promise = new Promise((resolve, reject) => {
+  const success = true;
+  if (success) {
+    setTimeout(() => {
+      resolve("User fetched successfully");
+    }, 2000);
+  } else {
+    reject("Something went wrong");
+  }
+});
+
+promise
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+//task5
+function login() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Login Success");
+      resolve();
+    }, 1000);
+  });
+}
+function getProfile() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Profile Loaded");
+      resolve();
+    }, 1000);
+  });
+}
+login().then(getProfile);
