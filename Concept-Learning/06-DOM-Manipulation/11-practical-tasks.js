@@ -193,3 +193,65 @@ const eCommerce = {
   price: 100,
   isColored: true,
 };
+
+//Topic 4: Type Coercion & Type Conversion
+// Task 1
+// Create a program that receives age as a string.
+// Convert it into a number.
+let age = Number(prompt("enter your age:"));
+console.log(age);
+console.log(typeof age);
+//or
+let isAge = "30";
+const convertAge = Number(isAge);
+console.log(convertAge);
+console.log(typeof convertAge);
+
+// Task 2
+// Create a program that receives price as a number.
+// Convert it into a string.
+let price = prompt("enter your age:");
+console.log(price);
+console.log(typeof price);
+//or
+let price2 = 300;
+const convertAge = String(price2);
+console.log(price2);
+console.log(typeof price2);
+
+// Task 3
+// Create a form input simulation.
+// Convert values into appropriate data types.
+const rawAgeInput = "25";
+const rawPriceInput = "19.99";
+const rawQuantityInput = "3";
+const rawNewsletterCheck = "true";
+
+const age = Number(rawAgeInput);
+const price = parseFloat(rawPriceInput);
+const quantity = parseInt(rawQuantityInput);
+const wantsNewsletter = Boolean(rawNewsletterCheck);
+
+console.log(age, typeof age);
+console.log(price, typeof price);
+console.log(wantsNewsletter, typeof wantsNewsletter);
+
+const totalCost = price * quantity;
+console.log(`Total: ${totalCost}`);
+
+// Task 4
+// Experiment with 5 different coercion examples and observe outputs.
+const ex1 = "5" + 2;
+console.log(ex1, typeof ex1);
+
+const ex2 = "5" - 2;
+console.log(ex2, typeof ex2);
+
+const ex3 = 5 == "5";
+console.log(ex3, typeof ex3);
+
+const ex4 = 10 + true;
+console.log(ex4, typeof ex4);
+
+const ex5 = "apple" * 3;
+console.log(ex5, typeof ex5);
