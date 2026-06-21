@@ -139,3 +139,57 @@ function userLogin() {
   console.log(`Login successful! Current count: ${loginCount}`);
 }
 userLogin();
+
+// Topic 3: Data Types
+// Task 1
+// Create variables representing all primitive data types.
+const num = 10;
+console.log(num);
+console.log(typeof num); //number
+
+const str = "ram";
+console.log(str);
+console.log(typeof str); //string
+
+const boolean = true;
+console.log(boolean);
+console.log(typeof boolean); //boolean
+
+const a;
+console.log(a);
+console.log(typeof a); //undefined
+
+const b = null;
+console.log(b);
+console.log(typeof b); //null
+
+let star = Symbol("hello"); //symbol
+console.log(star);
+console.log(typeof star);
+
+let n = BigInt("123");
+console.log(n);
+console.log(typeof n); //BigInt
+
+// Task 2
+// Create a student object and print its data.
+const student = {
+  name: "Ram",
+  age: 21,
+  course: "Full Stack",
+};
+console.log(student);
+
+// Task 3
+// Create an array of 5 favorite technologies.
+const technologies = ["html", "css", "javascript", "react", "node"];
+
+// Task 4
+// Create an e-commerce product containing mixed data types.
+const product = ["pencil", "red", 20, true];
+const eCommerce = {
+  product: "pencil",
+  brand: "aspara",
+  price: 100,
+  isColored: true,
+};
