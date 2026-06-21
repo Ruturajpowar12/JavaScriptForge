@@ -294,3 +294,96 @@ const minimumAgeRequirement = 18;
 const isEligible =
   userAge >= minimumAgeRequirement ? "eligible" : " not eligible";
 console.log(isEligible);
+
+//Topic 6: Conditional Statements
+// Task 1
+// Build a voting eligibility checker.
+const age = 19;
+if (age >= 18) {
+  console.log("eligible for voting");
+} else {
+  console.log("Not eligible for voting");
+}
+
+// Task 2
+// Build a student grade system.
+let mark = 87;
+if (mark <= 100 && mark >= 90) {
+  console.log("A+");
+} else if (mark <= 89 && mark >= 80) {
+  console.log("A");
+} else if (mark <= 79 && mark >= 70) {
+  console.log("B+");
+} else if (mark <= 69 && mark >= 60) {
+  console.log("A");
+} else if (mark <= 59 && mark >= 35) {
+  console.log("pass");
+} else {
+  console.log("fail");
+}
+
+// Task 3
+// Build a login role system.
+// Admin, Manager, Employee.
+let loginId = "admin";
+let accessMessage;
+switch (loginId) {
+  case "admin":
+    accessMessage = "Full administrator access granted.";
+    break;
+  case "manager":
+    accessMessage = "Manager access granted. Limited settings available.";
+    break;
+  case "employee":
+    accessMessage = "Employee access granted. Standard dashboard loaded.";
+    break;
+  default:
+    accessMessage = "Access denied. Invalid role.";
+}
+console.log(accessMessage);
+// Task 4
+// Build a traffic signal simulator.
+let signalColor = "red";
+let action;
+
+if (signalColor === "red") {
+  action = "Stop completely.";
+} else if (signalColor === "yellow") {
+  action = "Slow down and prepare to stop.";
+} else if (signalColor === "green") {
+  action = "Go safely.";
+} else {
+  action = "Signal malfunctioning. Proceed with caution.";
+}
+
+console.log(action);
+
+//Topic 7: Loops
+// Task 1
+// Print numbers 1 to 100.
+for (let i = 1; i <= 100; i++) {
+  console.log(i);
+}
+
+// Task 2
+// Print even numbers from 1 to 100.
+for (let i = 1; i <= 100; i++) {
+  if (i % 2 === 0) console.log(i);
+}
+// Task 3
+// Print multiplication tables from 1 to 10.
+let num = 1;
+while (num <= 10) {
+  for (let i = 1; i <= 10; i++) {
+    console.log(`${num} x ${i} = ${num * i} `);
+  }
+  console.log();
+
+  num++;
+}
+// Task 4
+// Print all student names from an array.
+const arrName = ["ram", "Swarup", "Sanskar", "Piyush"];
+for (let i = 0; i < arrName.length; i++) {
+  console.log(arrName[i]);
+}
