@@ -387,3 +387,105 @@ const arrName = ["ram", "Swarup", "Sanskar", "Piyush"];
 for (let i = 0; i < arrName.length; i++) {
   console.log(arrName[i]);
 }
+
+//Topic 8: Functions
+// Task 1
+// Create global and local variables and test access.
+const globalVariable = 10; //global variable
+function getMyFunction() {
+  const numb = 30; //local variable or block variable
+  console.log(globalVariable);
+  console.log(numb);
+}
+getMyFunction();
+
+// Task 2
+// Create nested functions and access outer variables.
+function outerFunction() {
+  const outerVariable = "Hello from the outside!";
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+  innerFunction();
+}
+outerFunction();
+
+// Task 3
+// Create a block scope example.
+{
+  let blockScopedLet = "I am trapped inside this block";
+  const blockScopedConst = "I am also trapped";
+  var functionScopedVar = "I can escape this block!";
+}
+console.log(functionScopedVar);
+console.log(typeof blockScopedLet);
+console.log(typeof blockScopedConst);
+
+// Task 4
+// Create a company dashboard simulation using scopes.
+const companyName = "TechCorp";
+function initDashboard() {
+  const department = "Engineering";
+  let activeUsers = 42;
+  function updateMetrics() {
+    activeUsers += 1;
+    console.log(`Dashboard: ${companyName}`);
+    console.log(`Department: ${department}`);
+    console.log(`Active Users: ${activeUsers}`);
+  }
+  return updateMetrics;
+}
+
+const renderDashboard = initDashboard();
+renderDashboard();
+
+//Topic 10: Hoisting
+// Task 1
+// Predict outputs before running the code.
+var score = 100;
+function adjustScore() {
+  console.log(score);
+  var score = 50;
+  console.log(score);
+}
+adjustScore();
+console.log(score);
+//undefined
+//50
+// 100
+
+// Task 2
+// Experiment with var hoisting.
+console.log(declaredWithVar);
+var declaredWithVar = "I am hoisted";
+console.log(declaredWithVar);
+
+// Task 3
+// Experiment with let and const hoisting.
+try {
+  console.log(declaredWithLet);
+} catch (error) {
+  console.log(error.name);
+}
+let declaredWithLet = "I am in TDZ";
+try {
+  console.log(declaredWithConst);
+} catch (error) {
+  console.log(error.name);
+}
+const declaredWithConst = "I am also in TDZ";
+
+// Task 4
+// Experiment with function hoisting.
+greetDeclaration();
+function greetDeclaration() {
+  console.log("Hello from a function declaration");
+}
+try {
+  greetExpression();
+} catch (error) {
+  console.log(error.name);
+}
+var greetExpression = function () {
+  console.log("Hello from a function expression");
+};
