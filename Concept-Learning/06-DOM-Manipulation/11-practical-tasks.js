@@ -255,3 +255,42 @@ console.log(ex4, typeof ex4);
 
 const ex5 = "apple" * 3;
 console.log(ex5, typeof ex5);
+
+//Topic 5: Operators
+// Task 1
+// Create a salary calculator.
+const hourlyRate = 25;
+const hoursPerWeek = 40;
+const weeksPerYear = 52;
+
+const weeklySalary = hourlyRate * hoursPerWeek;
+const annualSalary = weeklySalary * weeksPerYear;
+
+console.log(weeklySalary);
+console.log(annualSalary);
+
+// Task 2
+// Create a percentage calculator.
+const totol = 500;
+const percentage = 15;
+
+const result = totol * (15 / 100);
+console.log(result);
+
+// Task 3
+// Create a discount calculator.
+const originalPrice = 120;
+const discountPercentage = 20;
+
+const discount = originalPrice * (20 / 100);
+const finalPrice = originalPrice - discount;
+console.log(finalPrice);
+
+// Task 4
+// Create an age eligibility checker.
+const userAge = 19;
+const minimumAgeRequirement = 18;
+
+const isEligible =
+  userAge >= minimumAgeRequirement ? "eligible" : " not eligible";
+console.log(isEligible);
