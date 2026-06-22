@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="section">
+      <h2>Task 1: Sort by Experience</h2>
+      <div class="controls">
+        <select id="task1Sort">
+          <option value="default">Select Order</option>
+          <option value="lowHigh">Low → High</option>
+          <option value="highLow">High → Low</option>
+        </select>
+      </div>
+      <div id="task1Container" class="grid"></div>
+    </div>
+
+    <div class="section">
+      <h2>Task 2: Sort by Salary</h2>
+      <div class="controls">
+        <select id="task2Sort">
+          <option value="default">Select Order</option>
+          <option value="lowHigh">Low → High</option>
+          <option value="highLow">High → Low</option>
+        </select>
+      </div>
+      <div id="task2Container" class="grid"></div>
+    </div>
+
+    <div class="section">
+      <h2>Task 3: Sort by Name</h2>
+      <div class="controls">
+        <select id="task3Sort">
+          <option value="default">Select Order</option>
+          <option value="nameAZ">A → Z</option>
+        </select>
+      </div>
+      <div id="task3Container" class="grid"></div>
+    </div>
+
+    <div class="section">
+      <h2>Mini Challenge: Industry Dashboard Controls</h2>
+      <div class="controls">
+        <select id="miniDeptFilter">
+          <option value="All">All Departments</option>
+          <option value="IT">IT</option>
+          <option value="HR">HR</option>
+          <option value="Finance">Finance</option>
+        </select>
+        <select id="miniSortControl">
+          <option value="default">Sort By</option>
+          <option value="expLowHigh">Experience: Low → High</option>
+          <option value="expHighLow">Experience: High → Low</option>
+          <option value="salLowHigh">Salary: Low → High</option>
+          <option value="salHighLow">Salary: High → Low</option>
+          <option value="nameAZ">Name: A → Z</option>
+        </select>
+      </div>
+      <div id="miniContainer" class="grid"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
