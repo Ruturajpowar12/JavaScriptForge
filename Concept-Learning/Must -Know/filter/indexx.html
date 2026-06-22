@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>filter</title>
+    <style>
+      .coantainer {
+        background-color: aliceblue;
+        height: 100vh;
+      }
+      nav {
+        display: flex;
+        background-color: rgb(80, 80, 234);
+        justify-content: space-between;
+        padding-right: 50px;
+        align-items: center;
+      }
+      nav h1 {
+        padding-left: 50px;
+        color: white;
+        font-weight: 800;
+      }
+      nav select {
+        height: 30px;
+        width: auto;
+        padding: 6px;
+        border-radius: 5px;
+        box-shadow: 0px 18px 20px rgba(0, 0, 0, 0.2);
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        border-radius: 10px;
+        background: white;
+        margin: 10px auto;
+        width: 80%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      .h2 {
+        text-align: center;
+        margin: 30px 0 50px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <select id="departmentFilter">
+      <option value="All">All</option>
+      <option value="IT">IT</option>
+      <option value="HR">HR</option>
+      <option value="Finance">Finance</option>
+    </select>
+    <div id="displayEmployees"></div>
+    <br />
+    <hr />
+    <br />
+    <select id="StatusFilter">
+      <option value="All">All</option>
+      <option value="Active">Active</option>
+      <option value="Inactive">Inactive</option>
+    </select>
+    <div id="statusOfEmployee"></div>
+    <br />
+    <hr />
+    <br />
+    <select id="experianceFilter">
+      <option value="All">All</option>
+      <option value="1">1+ years</option>
+      <option value="3">3+ years</option>
+      <option value="5">5+ years</option>
+    </select>
+    <div id="displayExperiance"></div>
+    <br />
+    <hr />
+    <br />
+    <div class="coantainer">
+      <nav>
+        <h1>Employee Dashboard</h1>
+        <select id="empFilter">
+          <option value="All">All</option>
+          <option value="Department">Department</option>
+          <option value="Status">Status</option>
+          <option value="Experience">Experience</option>
+        </select>
+      </nav>
+      <div class="info">
+        <div id="displaydashboard"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
